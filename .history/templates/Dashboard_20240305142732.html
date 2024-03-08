@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+
+    <style>
+        .container {
+            text-align: center;
+            justify-content: center;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #f8f9fa;
+            justify-content: end;
+        }
+
+        .export-excel {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 12px 16px;
+            z-index: 1;
+        }
+
+        .profile-dropdown:hover .dropdown-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="dashboard-header">
+            <!-- <div class="profile-dropdown">
+                Profile
+                <div class="dropdown-content">
+                    <a href="/logout">Logout</a>
+                </div>
+            </div> -->
+            <div class="profile-dropdown">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="path/to/your/profile-image.jpg" alt="" width="32" height="32" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser">
+                    <li><a class="dropdown-item" href="/logout">Logout</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <!-- <div class="export-excel">
+            <button onclick="exportToExcel()">Export to Excel</button>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+        </div> -->
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+
+        <!-- <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item" style="justify-content: end;">
+                        <a class="btn btn-primary" href="#" style="padding-left: 50%;">Link</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav></br>  --><br>
+        <div class="d-flex" style="justify-content: end; padding: 10px; justify-content: space-evenly;">
+            <a class="btn btn-primary" href="">Export</a>
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search"
+                style="width: 5cm;position: relative; ;">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">S.no</th>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact</th>
+                    <th scope="col">Address</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>Niresh</td>
+                    <td>455835738</td>
+                    <td>No 637, vellore</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be inserted here dynamically or server-side -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@sheetjs/xlsx@0.4.0/dist/xlsx.full.min.js"></script>
+    <script>
+        function exportToExcel() {
+            /* This function will use SheetJS (xlsx) to export table data to an Excel file.
+               Implementation depends on the specific requirements and the data source. */
+            alert('Exporting to Excel...'); // Placeholder functionality
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+/*	Responsive Tabs v1.4, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
+//	======================================================================================= */
+
+/*	Table of Contents
+//	==================================================
+//		#Reset
+//		#Themes
+
+
+/*	#Reset
+//	================================================== */
+
+	/* Standard */
+.responsive-tabs {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	background-color: #fc4242;
+}
+.responsive-tabs li {
+	width: 125px;
+	margin: 0;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	padding: 0;
+	background-color: #242424;
+}
+.responsive-tabs li a {
+	display: block;
+	padding: 0px;
+	text-align: center;
+	line-height: 23px;
+	text-decoration: none;
+}
+.responsive-tabs li.active {
+	font-weight: bold;
+	background-color: #fff;
+}
+.responsive-tabs-content {
+	margin-bottom: 20px;
+}
+.responsive-tabs-content.bm-remove {
+	margin-bottom: 0;
+}
+.responsive-tabs-content.bm-smaller {
+	margin-bottom: 5px;
+}
+.responsive-tabs-content.bm-small {
+	margin-bottom: 10px;
+}
+.responsive-tabs-content.bm-medium {
+	margin-bottom: 20px;
+}
+.responsive-tabs-content.bm-large {
+	margin-bottom: 30px;
+}
+.responsive-tabs-content.bm-larger {
+	margin-bottom: 40px;
+}
+.responsive-tabs-content .responsive-tabs-panel {
+	padding: 0px 0 0 0;
+}
+.responsive-tabs-content .responsive-tabs-panel .responsive-tab-title {
+	display: none;
+}
+/* Tabs Left */
+.responsive-tabs.responsive-tabs-left {
+	width: 150px;
+	float: left;
+}
+.responsive-tabs.responsive-tabs-left li {
+	text-align: left;
+	float: none;
+}
+.responsive-tabs-content.responsive-tabs-left {
+	overflow: hidden;
+}
+/* Tabs Right */
+.responsive-tabs.responsive-tabs-right {
+	width: 150px;
+	float: right;
+}
+.responsive-tabs.responsive-tabs-right li {
+	text-align: right;
+	float: none;
+}
+.responsive-tabs-content.responsive-tabs-right {
+	overflow: hidden;
+}
+ @media only screen and (max-width: 767px) {
+.responsive-tabs li {
+	display: none;
+}
+.responsive-tabs-content .responsive-tabs-panel,  .responsive-tabs-content .responsive-tabs-panel .responsive-tab-title {
+	display: block;
+}
+}
+/*	#Themes
+//	================================================== */
+
+	/* Standard */
+.responsive-tabs-default .responsive-tabs li {
+	border: 1px solid #DDD;
+	border-right: 0;
+	background: #EEE;
+	cursor: pointer;
+	position: relative;
+	z-index: 999999;
+}
+.responsive-tabs-default .responsive-tabs li:last-child {
+	border-right: 1px solid #DDD;
+}
+.responsive-tabs-default .responsive-tabs li.active {
+	border-bottom: 1px solid #FFF;
+	background: #FFF;
+}
+.responsive-tabs-default .responsive-tabs-content {
+	border: 1px solid #DDD;
+	background: #FFF;
+	position: relative;
+	top: -1px;
+	z-index: 999;
+}
+.responsive-tabs-default .responsive-tabs-content .responsive-tab-title {
+	color: #0B8593;
+}
+/* Tabs Left */
+.responsive-tabs-default .responsive-tabs.responsive-tabs-left {
+	left: 1px;
+}
+.responsive-tabs-default .responsive-tabs.responsive-tabs-left li {
+	width: 100%;
+	border-right: 1px solid #DDD;
+	border-bottom: 0;
+	line-height: 50px;
+}
+.responsive-tabs-default .responsive-tabs.responsive-tabs-left li:last-child {
+	border-bottom: 1px solid #DDD;
+}
+.responsive-tabs-default .responsive-tabs.responsive-tabs-left li.active {
+	border-right: 1px solid #FFF;
+}
+.responsive-tabs-default .responsive-tabs-content.responsive-tabs-left {
+	top: 0;
+}
+/* Tabs Right */
+.responsive-tabs-default .responsive-tabs.responsive-tabs-right {
+	right: 1px;
+}
+.responsive-tabs-default .responsive-tabs.responsive-tabs-right li {
+	width: 100%;
+	border-right: 1px solid #DDD;
+	border-bottom: 0;
+	border-left: 1px solid #DDD;
+	line-height: 50px;
+}
+.responsive-tabs-default .responsive-tabs.responsive-tabs-right li:last-child {
+	border-bottom: 1px solid #DDD;
+}
+.responsive-tabs-default .responsive-tabs.responsive-tabs-right li.active {
+	border-left: 1px solid #FFF;
+}
+.responsive-tabs-default .responsive-tabs-content.responsive-tabs-right {
+	top: 0;
+}
+
+/*custom styles*/
+.tab-navbar-main {
+	width: 100%;
+	display: inline-block;
+	text-align: center;/*background-color:#fc4242;*/
+}
+.tab-content-holder {
+	width: 100%;
+	float: left;
+	padding: 40px;
+	background-color: #fff;
+}
+.tab-content-holder.less-padding {
+	padding: 25px;
+}
+.tab-navicon span {
+	font-size: 36px;
+	display: inline-block;
+	padding: 10px 0 0 0;
+	text-align: center;
+}
+.tab-navicon.less-fsize span {
+	font-size: 27px;
+}
+.tabstyle-1 .responsive-tabs {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	background-color: #fc4242;
+}
+.tabstyle-1 .responsive-tabs li {
+	width: 190px;
+	margin: 0;
+	text-align: center;
+	line-height: 50px;
+	float: left;
+	padding: 0;
+	border-right:1px solid #ebebeb;
+	background-color: #fff;
+}
+.tabstyle-1 .responsive-tabs.lesswidth li {
+	width: 138px;
+	line-height: 50px;
+}
+.tabstyle-1 .responsive-tabs li:last-child {
+	border-right:none;
+}
+.tabstyle-1 .responsive-tabs li a {
+	display: block;
+	padding: 20px;
+	text-align: center;
+	line-height: 23px;
+	font-size:14px;
+	font-weight:normal;
+	text-transform:uppercase;
+	text-decoration: none;
+	transition: all 0.3s ease-out 0s;
+}
+.tabstyle-1 .responsive-tabslesswidth li a {
+	padding: 15px;
+}
+.tabstyle-1 .responsive-tabs li a:hover, .tabstyle-1 .responsive-tabs li.active, .tabstyle-1 .responsive-tabs li.active a {
+	color: #ccc;
+}
+
+.tabstyle-1 .responsive-tabs-content {
+	margin-bottom: 20px;
+}
+
+
+
+/* Tab atyle 2
+ ------------------------------ */
+.tab-navbar-main-style-2 {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	background-color:#242424;
+}
+
+.tab-content-style-2 {
+	width: 100%;
+	float: left;
+	padding: 40px;
+	background-color: #fff;
+}
+.tabstyle-2 .responsive-tabs {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	background-color: #fc4242;
+}
+.tabstyle-2 .responsive-tabs li {
+	width:auto;
+	margin: 0;
+	text-align: center;
+	line-height: 50px;
+	padding: 0;
+	float:left;
+	border-right:1px solid #727272;
+	background-color: #242424;
+}
+.tabstyle-2 .responsive-tabs li:last-child {
+	border-right:none;
+}
+.tabstyle-2 .responsive-tabs li a {
+	display: block;
+	padding: 15px;
+	text-align: center;
+	line-height: 23px;
+	font-size:14px;
+	font-weight:normal;
+	text-transform:uppercase;
+	text-decoration: none;
+	transition: all 0.3s ease-out 0s;
+}
+.tabstyle-2 .responsive-tabs li a:hover, .tabstyle-2 .responsive-tabs li.active, .tabstyle-2 .responsive-tabs li.active a {
+	color: #fff;
+	border-right:1px solid #ccc;
+	background-color: #ccc;
+}
+
+.tabstyle-2 .responsive-tabs-content {
+	margin-bottom: 20px;
+}
+
+
+
+/* Tab atyle 3
+ ------------------------------ */
+.tab-navbar-main-style-3 {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+	border:1px solid #e4e4e4;
+	background-color:transparent;
+}
+
+.tab-content-style-3 {
+	width: 100%;
+	float: left;
+	padding: 40px;
+	border:1px solid #e4e4e4;
+	background-color: transparent;
+}
+.tabstyle-3 .responsive-tabs {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	background-color: transparent;
+}
+.tabstyle-3 .responsive-tabs li {
+	width:50%;
+	margin: 0;
+	text-align: center;
+	line-height: 50px;
+	padding: 0;
+	float:left;
+	border-right:1px solid #e4e4e4;
+	background-color: transparent;
+}
+.tabstyle-3 .responsive-tabs li:last-child {
+	border-right:none;
+}
+.tabstyle-3 .responsive-tabs li a {
+	display: block;
+	padding: 15px;
+	text-align: center;
+	line-height: 23px;
+	font-size:14px;
+	font-weight:normal;
+	text-transform:uppercase;
+	text-decoration: none;
+	transition: all 0.3s ease-out 0s;
+}
+.tabstyle-3 .responsive-tabs li a:hover, .tabstyle-3 .responsive-tabs li.active, .tabstyle-3 .responsive-tabs li.active a {
+	color: #ccc;
+}
+
+.tabstyle-3 .responsive-tabs-content {
+	margin-bottom: 20px;
+}

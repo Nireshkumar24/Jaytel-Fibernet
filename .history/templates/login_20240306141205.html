@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hostlinea - Web Hosting, Responsive HTML5 Template</title>
+  <meta name="keywords" content="hostlinea, themeforest, envatoelements, codelayers, website templates " />
+  <meta name="description" content="Hostlinea hosting HTML5 Template">
+  <meta name="author" content="codelayers">
+
+  <!-- Mobile view -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Google fonts - witch you want to use - (rest you can just remove) -->
+  <link
+    href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic'
+    rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet'
+    type='text/css'>
+
+  <!-- Template's stylesheets -->
+  <link rel="stylesheet" href="js/template-custom/css/template-custom.css">
+  <link rel="stylesheet" href="css/theme-default.css" type="text/css">
+  <link rel="stylesheet" href="css/theme.css" type="text/css">
+  <link rel="stylesheet" href="js/mainmenu/menu.css" type="text/css" />
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css" media="screen" />
+  <link rel="stylesheet" href="fonts/et-line-font/et-line-font.css">
+  <link href="js/accordion/css/smk-accordion.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="js/smart-forms/smart-forms.css">
+  <link rel="stylesheet" href="css/theme-responsive.css">
+
+  <!-- Template's stylesheets END -->
+
+  <!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+  <!-- Style Customizer's stylesheets -->
+
+  <link rel="stylesheet/less" type="text/css" href="less/skin.less">
+
+  <style>
+    /* Targeting the links directly for hover effect */
+    .navbar-default .navbar-nav>li>a {
+      transition: all 0.3s ease;
+      /* Smooth transition for background and border changes */
+      padding: 10px 15px;
+      /* Adjust padding as needed */
+      margin: 5px 0;
+      /* Margin for spacing between menu items */
+      border: 3px solid transparent;
+      /* Initial border setting */
+    }
+
+    /* Adding the hover effect */
+    .navbar-default .navbar-nav>li>a:hover {
+      background-color: blue;
+      /* Background color change on hover */
+      color: white;
+      /* Text color change on hover, if needed */
+      border-color: blue;
+      /* Border color change on hover */
+    }
+
+
+
+    /* Centering the logo */
+    .navbar-header .navbar-brand {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80px;
+      /* Adjust based on your navbar's height */
+    }
+
+    /* Styling the image within the navbar-brand */
+    .navbar-header .navbar-brand img {
+      margin: 0 auto;
+      /* Centers the image */
+      display: block;
+      padding-bottom: 10px 0;
+      /* Adjust the padding to ensure it doesn't touch other elements */
+    }
+  </style>
+
+<body class="loading">
+
+
+
+  <div class="preloader-wrap"></div>
+
+  <!-- Page template -->
+
+  <!-- Preloader icon -->
+
+  <div class="wrapper-boxed">
+    <div class="site-wrapper" style="position: relative;">
+      <div class="topbar light topbar-padding">
+        <div class="container">
+          <ul class="toplist toppadding">
+            <li class="lineright"><a href="{{ url_for('login') }}">Admin Login</a></li>
+            <li class="lineright"><a href="#">Register</a></li>
+            <li><a href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/codelayers"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <!--end topbar-->
+
+      <div class="col-md-12 nopadding">
+        <div id="header">
+          <div class="container">
+            <div class="navbar navbar-default yamm">
+              <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid"
+                  class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span
+                    class="icon-bar"></span></button>
+                <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.svg') }}"
+                    alt="logo" style="width:100px;"></a>
+              </div>
+              <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
+                <ul class="nav navbar-nav" style="font-size: large; padding-top: 25px;">
+                  <li class="dropdown"> <a href="{{ url_for('index') }}" class="dropdown-toggle">Home</a>
+
+                  </li>
+
+                  <li> <a href="{{ url_for('contact') }}" class="dropdown-toggle">Register</a></li>
+
+                  <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">About Us</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--end menu-->
+
+      <div class="clearfix"></div>
+      <section class="sec-padding section-dark text-center">
+        <div class="container">
+          <div class="row">
+            <h1 class="text-white uppercase font-weight-7">We are Host Linea</h1>
+            <h5 class="text-normal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo.
+              <br />
+              Praesent mattis commodo augue. Aliquam
+            </h5>
+            <br />
+            <a href="#" class="btn btn-bgprimary">Get Started</a>
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!-- end section -->
+
+      <section>
+        <div class="pagenation-holder">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+
+              </div>
+              <div class="col-md-6 text-right">
+                <div class="pagenation_links"><a href="#">Home</a><i> / </i> <a href="#">Pages</a> <i>
+                    / </i> Login Form</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!--end section-->
+
+
+      <section class="sec-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-centered">
+              <div class="text-box padding-4 border">
+                <div class="smart-forms smart-container wrap-3" style="background-color: cadetblue;">
+                  <h4 class="uppercase" style="text-align: center;padding: 10px;">Login Form</h4>
+                  <form method="post" action="{{ url_for('login') }}" id="contact">
+                    <div>
+                      <!-- <div class="spacer-b30">
+                      </div> -->
+
+
+
+                      <div class="spacer-t30 spacer-b30">
+                        <div class="tagline"><span> Login </span></div><!-- .tagline -->
+                      </div>
+                      <br />
+                      <div class="section" style="padding: 15px;">
+                        <label class="field prepend-icon">
+                          <input type="text" name="username" id="username" class="gui-input"
+                            placeholder="Enter username">
+                          <span class="field-icon"><i class="fa fa-user"></i></span>
+                        </label>
+                      </div><!-- end section -->
+
+                      <div class="section" style="padding: 15px;">
+                        <label class="field prepend-icon">
+                          <input type="text" name="password" id="password" class="gui-input"
+                            placeholder="Enter password">
+                          <span class="field-icon"><i class="fa fa-lock"></i></span>
+                        </label>
+                      </div><!-- end section -->
+
+
+
+                    </div><!-- end .form-body section -->
+                    <div class="sbutton" style="padding: 20px;">
+                      <button type="submit" class="btn btn-bgprimary">Sign in</button>
+                    </div><!-- end .form-footer section -->
+                  </form>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!--end item-->
+
+        </div>
+      </section>
+      <!--end item -->
+      <div class="clearfix"></div>
+      <!-- 
+      <div class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-md-6">
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <h4 class="card-title mb-4">Login</h4>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="bi bi-person-fill"></i>
+                      </span>
+                      <input type="text" class="form-control" placeholder="Username" name="username" required>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="input-group">
+                      <span class="input-group-text">
+                        <i class="bi bi-lock-fill"></i>
+                      </span>
+                      <input type="password" class="form-control" placeholder="Password" name="password" required>
+                    </div>
+                  </div>
+                  <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Optional Remember Me Section -->
+
+
+
+      <section class="section-primary">
+        <div class="container sec-tpadding-1 sec-bpadding-1">
+          <div class="row">
+            <div class="col-md-9">
+              <h3 class="text-white">Over 4 million customers trust our services and servers</h3>
+            </div>
+            <div class="col-md-3">
+              <div class="margin-top2"></div>
+              <a class="btn btn-border white btn-large pull-right" href="#">Sign Up Now !</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!--end section-->
+
+      <section class="section-xdark sec-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
+              <h5 class="footer-title uppercase less-mar-3 font-weight-4">About</h5>
+              <div class="clearfix"></div>
+              <div class="footer-title-line align-left"></div>
+              <div class="clearfix"></div>
+              <ul class="usefull-links no-border">
+                <li><a href="#"><i class="fa fa-angle-right"></i> About Us</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Hosting Plans</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Our Awards</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Our History</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Our History</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Privacy</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
+              </ul>
+            </div>
+            <!--end item-->
+
+            <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
+              <div class="item-holder">
+                <h5 class="footer-title uppercase less-mar-3 font-weight-4">Latest Blog Posts</h5>
+                <div class="clearfix"></div>
+                <div class="footer-title-line align-left"></div>
+                <div class="clearfix"></div>
+                <div class="image-left"><img src="http://placehold.it/80x80" alt="" /></div>
+                <div class="text-box-right">
+                  <h6 class="text-white less-mar3 nopadding font-weight-3 nopadding"><a href="#">Shared Hosting</a></h6>
+                  <p>Lorem ipsum dolor sit</p>
+                  <div class="footer-post-info"> <span>By John Doe</span><span>May 19</span> </div>
+                </div>
+                <!--end item-->
+
+                <div class="divider-line solid dark margin opacity-3"></div>
+                <div class="clearfix"></div>
+                <div class="image-left"><img src="http://placehold.it/80x80" alt="" /></div>
+                <div class="text-box-right">
+                  <h6 class="text-white less-mar3 font-weight-3 nopadding"><a href="#">VPS Hosting</a></h6>
+                  <p>Lorem ipsum dolor sit</p>
+                  <div class="footer-post-info"> <span>By John Doe</span><span>May 19</span> </div>
+                </div>
+              </div>
+            </div>
+            <!--end item-->
+
+            <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
+              <h5 class="footer-title uppercase less-mar-3 font-weight-4">Usefull Links</h5>
+              <div class="clearfix"></div>
+              <div class="footer-title-line align-left"></div>
+              <div class="clearfix"></div>
+              <ul class="usefull-links no-border">
+                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Aliquam porttitor vestibulum ipsum</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Ullamcorper odio nec turpis</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Placerat bibendum</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Lobortis enim nec nisi</a></li>
+              </ul>
+            </div>
+            <!--end item-->
+
+            <div class="col-md-3 col-sm-6 col-xs-12 bottom-margin">
+              <h5 class="footer-title uppercase less-mar-3 font-weight-4">Need Help</h5>
+              <div class="clearfix"></div>
+              <div class="footer-title-line align-left"></div>
+              <div class="clearfix"></div>
+              <ul class="usefull-links no-border">
+                <li><a href="#"><i class="fa fa-angle-right"></i> Contact Us</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Tech Support</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> My Account</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Legal</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Privacy</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> My Account</a></li>
+                <li><a href="#"><i class="fa fa-angle-right"></i> Documentation</a></li>
+              </ul>
+            </div>
+            <!--end item-->
+
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!--end section-->
+
+      <section class="sec-xless-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12 bmargin">
+              <ul class="footer-payment-logo-list">
+                <li>
+                  <h6>We Accept:</h6>
+                </li>
+                <li><img src="http://placehold.it/50x30" alt="" /></li>
+                <li><img src="http://placehold.it/50x30" alt="" /></li>
+                <li><img src="http://placehold.it/50x30" alt="" /></li>
+                <li><img src="http://placehold.it/50x30" alt="" /></li>
+                <li><img src="http://placehold.it/50x30" alt="" /></li>
+              </ul>
+            </div>
+            <!--end item-->
+
+            <div class="col-md-4 col-sm-12 col-xs-12 bmargin">
+              <ul class="footer-payment-logo-list">
+                <li>
+                  <h6>Awards:</h6>
+                </li>
+                <li><img src="http://placehold.it/60x45" alt="" /></li>
+                <li><img src="http://placehold.it/60x45" alt="" /></li>
+                <li><img src="http://placehold.it/60x45" alt="" /></li>
+              </ul>
+            </div>
+            <!--end item-->
+
+            <div class="col-md-2 col-sm-12 col-xs-12 bottom-margin"> <a class="btn btn-green" href="#"><i
+                  class="fa fa-comments"></i> Live Chat</a> </div>
+            <!--end item-->
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!-- end section -->
+
+      <div class="divider-line-dobble"></div>
+      <div class="clearfix"></div>
+      <section class="sec-xxless-padding">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-left"> <span>Copyright © 2019 <a
+                  href="https://1.envato.market/hostlinea-html-by-codelayers">Hostlinea</a> By <a
+                  href="https://1.envato.market/codelayers">Codelayers</a> | All rights reserved.</span></div>
+            <div class="col-md-6">
+              <ul class="footer-social-icons pull-right">
+                <li><a class="twitter" href="https://twitter.com/codelayers"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!--end section-->
+
+      <a href="#" class="scrollup"></a><!-- end scroll to top of the page-->
+
+    </div>
+    <!--end site wrapper-->
+  </div>
+  <!--end wrapper boxed-->
+
+  <!-- Scripts -->
+  <script src="js/jquery/jquery.min.js"></script>
+  <script src="js/bootstrap/js/bootstrap.min.js"></script>
+
+  <script src="js/less/less.min.js" data-env="development"></script>
+  <script src="js/sticky/js/jquery.sticky.js"></script>
+  <!-- Scripts END -->
+
+  <!-- Template scripts -->
+  <script src="js/mainmenu/customeUI.js"></script>
+  <script src="js/template-custom/js/template-custom.js"></script>
+  <script src="js/accordion/js/smk-accordion.js"></script>
+  <script src="js/functions/functions.js"></script>
+</body>
+
+</html>

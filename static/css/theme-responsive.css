@@ -1,0 +1,671 @@
+
+/*----------------------------RESPONSIVE STYLES------------------------------- */
+/* ---------- MAX 1024PX ---------- */
+@media screen and (max-width: 1024px) {
+	
+.ms-layer.offerbadge {
+    height: 94px;
+    padding: 50px 0px 0px;
+    width: 130px;
+}
+.ms-layer.offerbadge.two {
+    height: 82px;
+    padding: 20px 0px 0px;
+    width: 100px;
+}
+.domain-search-home-2 #domain-searchform #dsearch {
+    width: 70%;
+}
+.feature-box-14 img {
+	max-width: 100%;
+	height: auto;
+}
+.pricetable-holder-5 .title-box .arrow-right {
+    left: 243px;
+}
+
+.help-sear-holder #search-field {
+    width: 80%;
+}
+.domain-search-home-2 #search-submit {
+    padding: 5px 30px;
+}
+.feature-box-19 .iconcircle-medium {
+    left: 63px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	}
+	
+	
+
+/* ---------- MAX 991PX ---------- */
+@media only screen and (max-width: 991px) {
+
+.container{ width:94%;}
+
+.domain-search-home #domain-searchform #dsearch {
+    width: 77%;
+}
+.feature-box-3 .offerbadge {
+    top: 112px;
+}
+.pricetable-holder-5 .title-box .arrow-right, .pricetable-holder-5 .title-box .arrow-left {
+	display:none;
+}
+
+.table-style-2 table, thead, tbody, th, td, tr { 
+display: block; 
+}
+		
+.table-style-2 td { 
+border: none;
+border-bottom: 1px solid #eee; 
+position: relative;
+padding-left: 50%; 
+}
+		
+.table-style-2 td:before { 
+position: absolute;
+top: 6px;
+left: 6px;
+width: 45%; 
+padding-right: 10px; 
+white-space: nowrap;
+}
+	
+.table-style-2 td:nth-of-type(1):before { content: "TLD"; }
+.table-style-2 td:nth-of-type(2):before { content: "Registration"; }
+.table-style-2 td:nth-of-type(3):before { content: "Domain Transfer"; }
+.table-style-2 td:nth-of-type(4):before { content: "DNS Management"; }
+.table-style-2 td:nth-of-type(5):before { content: "Whois Privacy"; }
+.table-style-2 td:nth-of-type(6):before { content: ""; }
+
+.feature-box-19 .iconcircle-medium {
+    left: 170px;
+}
+.feature-box-19 {
+    margin-bottom: 65px;
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+/* ---------- MAX 800PX ---------- */
+@media only screen and (max-width: 800px) {
+
+.ms-layer.offerbadge {
+    height: 85px;
+	font-size:14px;
+    padding: 50px 0px 0px;
+    width: 111px;
+}
+.ms-layer.offerbadge.two {
+    height: 65px;
+    padding: 20px 0px 0px;
+    width: 80px;
+}
+.ms-layer.offerbadge span.price {
+    font-size: 20px;
+}
+.domain-search-home #domain-searchform #dsearch {
+    width: 70%;
+}
+.domain-search-home #search-submit {
+    height: 55px;
+	border-left:1px solid #727272;
+}
+.feature-box-6 .image-holder .text {
+    width: 70%;
+}
+.domain-search-home-2 #domain-searchform #dsearch {
+    width: 62%;
+}
+.help-sear-holder #search-field {
+    width: 76%;
+}
+.domain-search-home-2.bg-white #domain-searchform #dsearch {
+    width: 70%;
+}
+
+.table-style-2 table, thead, tbody, th, td, tr { 
+display: block; 
+}
+		
+.table-style-2 td { 
+border: none;
+border-bottom: 1px solid #eee; 
+position: relative;
+padding-left: 50%; 
+}
+		
+.table-style-2 td:before { 
+position: absolute;
+top: 6px;
+left: 6px;
+width: 45%; 
+padding-right: 10px; 
+white-space: nowrap;
+}
+	
+.table-style-2 td:nth-of-type(1):before { content: "TLD"; }
+.table-style-2 td:nth-of-type(2):before { content: "Registration"; }
+.table-style-2 td:nth-of-type(3):before { content: "Domain Transfer"; }
+.table-style-2 td:nth-of-type(4):before { content: "DNS Management"; }
+.table-style-2 td:nth-of-type(5):before { content: "Whois Privacy"; }
+.table-style-2 td:nth-of-type(6):before { content: ""; }
+
+
+.blog-holder-1 .post-date-box {
+    width: 95px;
+    height: 95px;
+    font-size: 28px;
+    padding: 18px 0px 0px;
+}
+.blog-holder-1:hover .image-holder .overlay .icon {
+    top: 100px;
+}
+.blog-holder-1 .post-date-box.two {
+    top: 127px;
+}
+.feature-box-19 .iconcircle-medium {
+    left: 123px;
+}
+
+
+
+
+
+
+
+
+ 
+}
+
+
+/* ---------- MAX 768PX ---------- */
+@media only screen and (max-width: 768px) {
+
+.feature-box-6 .image-holder .text {
+    width: 70%;
+}
+.btn.btn-green {
+    margin-top: 20px;
+}
+.topbar-left-items {
+    width: 100%;
+}
+.topbar-right-items {
+    width: 100%;
+}
+.domain-search-home-2 #search-submit {
+    padding: 5px 54px;
+}
+.sub-title-2 {
+    width:100%;
+}
+.help-sear-holder #search-field {
+    width: 74%;
+}
+.domain-search-home-2.bg-white #domain-searchform #dsearch {
+    width: 45%;
+	height: 50px;
+}
+
+.table-style-2 td:nth-of-type(1):before { content: "TLD"; }
+.table-style-2 td:nth-of-type(2):before { content: "Registration"; }
+.table-style-2 td:nth-of-type(3):before { content: "Domain Transfer"; }
+.table-style-2 td:nth-of-type(4):before { content: "DNS Management"; }
+.table-style-2 td:nth-of-type(5):before { content: "Whois Privacy"; }
+.table-style-2 td:nth-of-type(6):before { content: ""; }
+
+#domain-search-holder .drlist {
+	float:left;
+}
+#domain-search-holder #dsearch {
+    height: 80px;
+    width: 60%;
+}
+.domain-search-home-2.bg-white #domain-searchform #dsearch {
+    width: 60%;
+    height: 70px;
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+/* ---------- MAX 767PX ---------- */
+@media only screen and (max-width: 767px) {
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+.ms-layer.offerbadge {
+    height: 72px;
+    padding: 50px 0px 0px;
+    width: 90px;
+}
+.ms-layer.offerbadge.two {
+    height: 60px;
+    padding: 20px 0px 0px;
+    width: 70px;
+}
+.ms-layer.offerbadge span.price {
+    font-size: 20px;
+}
+.domain-search-home #domain-searchform #dsearch {
+    width: 66%;
+}
+.domain-search-home #search-submit {
+    height: 55px;
+	border-left:1px solid #727272;
+}
+.feature-box-6 .image-holder .text {
+    width: 78%;
+}
+.domain-search-home-2 #search-submit {
+    padding: 5px 34px;
+}
+.help-sear-holder #search-field {
+    width: 70%;
+}
+
+.table-style-2 td:nth-of-type(1):before { content: "TLD"; }
+.table-style-2 td:nth-of-type(2):before { content: "Registration"; }
+.table-style-2 td:nth-of-type(3):before { content: "Domain Transfer"; }
+.table-style-2 td:nth-of-type(4):before { content: "DNS Management"; }
+.table-style-2 td:nth-of-type(5):before { content: "Whois Privacy"; }
+.table-style-2 td:nth-of-type(6):before { content: ""; }
+
+.blog-holder-1 .post-date-box {
+    width: 75px;
+    height: 75px;
+    font-size: 19px;
+    padding: 10px 0px 0px;
+}
+.blog-holder-1:hover .image-holder .overlay .icon {
+    top: 68px;
+}
+.blog-holder-1 .post-date-box.two {
+    top: 92px;
+}
+.blog-holder-1 .image-holder .overlay {
+    padding: 3px;
+}
+.blog-holder-1 .post-date-box span {
+    font-size: 12px;
+    padding-top: 0;
+}
+
+#domain-search-holder .drlist {
+	float:left;
+}
+#domain-search-holder #dsearch {
+    height: 80px;
+    width: 51%;
+}
+.domain-search-home-2.bg-white #domain-searchform #dsearch {
+    width: 60%;
+    height: 70px;
+}
+.feature-box-19 .iconcircle-medium {
+    left: 237px;
+}
+
+
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+.ms-layer.offerbadge {
+    height: 63px;
+    padding: 40px 0px 0px;
+    width: 73px;
+}
+.ms-layer.offerbadge.two {
+    height: 49px;
+    padding: 20px 0px 0px;
+    width: 59px;
+}
+.ms-layer.offerbadge span.price {
+    font-size: 20px;
+}
+.domain-search-home #domain-searchform #dsearch {
+    width: 53%;
+}
+.feature-box-3 .offerbadge {
+    width: 107px;
+    height: 104px;
+    font-size: 14px;
+    top: 143px;
+    padding: 20px 0px 0px;
+}
+.offerbadge span.price {
+    font-size: 20px;
+    line-height: 22px;
+}
+.offer-title-big {
+    font-size: 42px;
+}
+.feature-box-6 .image-holder .text {
+    width: 100%;
+}
+.feature-box-5 {
+    padding: 0px 0px 0;
+}
+.domain-search-home-2 #domain-searchform #dsearch {
+    width: 48%;
+	height: 50px;
+}
+.domain-search-home-2 .drlist {
+    height: 50px;
+}
+.domain-search-home-2 #search-submit {
+    height: 50px;
+}
+.help-sear-holder #search-btn {
+    padding: 5px 29px;
+}
+
+.blog-holder-1 .post-date-box {
+    width: 55px;
+    height: 55px;
+    font-size: 14px;
+    padding: 3px 0px 0px;
+}
+.blog-holder-1 .post-date-box span {
+    font-size: 9px;
+    padding-top: 0px;
+}
+.blog-holder-1 .post-date-box.two {
+    top: 54px;
+}
+.blog-holder-1:hover .image-holder .overlay .icon {
+    top: 45px;
+}
+.blog-holder-1 .image-holder .overlay .icon {
+    font-size: 11px;
+    height: 35px;
+    line-height: 41px;
+    width: 35px;
+    top: -60px;
+}
+
+.feature-box-3 .offerbadge {
+   display:none;
+}
+.footer-payment-logo-list {
+    margin: 10px 0 0 0;
+}
+
+.footer-payment-logo-list li {
+    padding: 0 10px 10px 0;
+}
+.domain-search-home-3 .drlist {
+    width: 85px;
+}
+.domain-search-home-3 #search-submit {
+    padding: 5px 22px;
+}
+.domain-search-home-3 #domain-searchform #dsearch {
+    width: 60%;
+}
+.domain-search-home-3 {
+    margin: 0 0 20px 0;
+}
+.tld-list.dark li {
+    padding: 0px 18px;
+}
+.footer-social-icons {
+    margin: 10px 0 0 0;
+}
+.blog-holder-1 .post-date-box.three.four {
+    top: 84px;
+}
+#domain-search-holder #searchsubmit {
+    font-size: 14px;
+    padding: 4px 10px;
+}
+#domain-search-holder #dsearch {
+    width: 50%;
+	height:77px;
+}
+#domain-search-holder .drlist {
+    float: left;
+	height:77px;
+}
+#domain-search-holder .drlist {
+    width: 96px;
+}
+.domain-search-home-2.bg-white #domain-searchform #dsearch {
+    width: 48%;
+    height: 50px;
+}
+.feature-box-19 .iconcircle-medium {
+    left: 164px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+/* ---------- MAX 360PX ---------- */
+@media screen and (max-width: 360px) {
+
+.ms-layer.offerbadge {
+    height: 50px;
+	font-size:24px;
+    padding: 40px 0px 0px;
+    width: 60px;
+}
+.ms-layer.offerbadge.two {
+    height: 42px;
+    padding: 20px 0px 0px;
+    width: 50px;
+	font-size: 15px;
+	line-height: 18px;
+}
+.ms-layer.offerbadge span.price {
+    font-size: 20px;
+	line-height: 29px;
+}
+.domain-search-home #domain-searchform #dsearch {
+    width: 47%;
+}
+.domain-search-home .drlist {
+    width: 65px;
+}
+.domain-search-home #search-submit {
+    padding: 5px 13px;
+}
+
+.feature-box-3 .offerbadge {
+    width: 78px;
+	height: 81px;
+    font-size: 10px;
+    top: 143px;
+    padding: 10px 0px 0px;
+}
+.offerbadge span.price {
+    font-size: 14px;
+    line-height: 22px;
+}
+.domain-search-home-2 .drlist {
+    width: 78px;
+}
+.domain-search-home-2 #search-submit {
+    padding: 5px 13px;
+}
+
+.footer-payment-logo-list li {
+    padding: 0 10px 10px 0;
+}
+.footer-payment-logo-list.align-right li {
+    padding: 0px 0 0px 0px;
+    margin: 0px;
+    float: left;
+}
+.divider-line.dark {
+    width:100%;
+}
+.footer-payment-logo-list {
+	width:90%;
+}
+
+.help-sear-holder #search-field {
+    width: 70%;
+	height:50px;
+}
+.help-sear-holder #search-btn {
+    height: 50px;
+    padding: 5px 15px;
+}
+div#clock {
+    padding: 0px 0px 0px 0;
+}
+.error-title-big {
+    font-size: 111px;
+}
+.domain-search-home.dark .drlist {
+    width: 92px;
+}
+.domain-search-home-3 .drlist {
+    width: 80px;
+}
+.domain-search-home-3 #search-submit {
+    padding: 5px 14px;
+}
+.domain-search-home-3 #domain-searchform #dsearch {
+    font-size: 13px;
+    width: 51%;
+}
+.tld-list.dark li.title {
+    width: 100%;
+}
+
+.toplist li {
+    padding: 1px 17px 0 17px;
+}
+.blog-holder-1 .post-date-box.three.four {
+    top: 84px;
+}
+#domain-search-holder #dsearch {
+    width: 41%;
+	font-size:13px;
+    height: 50px;
+}
+#domain-search-holder .drlist {
+    float: left;
+	font-size: 13px;
+    height: 50px;
+	width: 75px;
+}
+#domain-search-holder #searchsubmit {
+    font-size: 14px;
+    padding: 0px 5px;
+	height: 50px;
+}
+.feature-box-19 .iconcircle-medium {
+    left: 105px;
+}
+
+
+
+
+
+
+
+
+
+}
+
+/* ---------- MAX 320PX ---------- */
+@media only screen and (max-width: 320px) {
+.domain-search-home-2 #search-submit {
+    padding: 5px 8px;
+}
+.domain-search-home-2 #domain-searchform #dsearch {
+    font-size:13px;
+}
+
+.footer-payment-logo-list li {
+    padding: 0px 0 0px 0px;
+    margin: 0px;
+    float: left;
+}
+.toplist li {
+    padding: 1px 10px 0 10px;
+}
+#domain-search-holder #dsearch {
+    width: 73%;
+    font-size: 13px;
+    height: 50px;
+}
+.feature-box-19 .iconcircle-medium {
+    left: 86px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+

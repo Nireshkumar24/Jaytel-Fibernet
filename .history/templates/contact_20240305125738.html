@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Hostlinea - Web Hosting, Responsive HTML5 Template</title>
+  <meta name="keywords" content="hostlinea, themeforest, envatoelements, codelayers, website templates " />
+  <meta name="description" content="Hostlinea hosting HTML5 Template">
+  <meta name="author" content="codelayers">
+
+  <!-- Mobile view -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="js/bootstrap/css/bootstrap.min.css">
+
+  <!-- Google fonts - witch you want to use - (rest you can just remove) -->
+  <link
+    href='http://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic'
+    rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet'
+    type='text/css'>
+
+  <!-- Template's stylesheets -->
+  <link rel="stylesheet" href="js/template-custom/css/template-custom.css">
+  <link rel="stylesheet" href="css/theme-default.css" type="text/css">
+  <link rel="stylesheet" href="css/theme.css" type="text/css">
+  <link rel="stylesheet" href="js/mainmenu/menu.css" type="text/css" />
+  <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="fonts/Simple-Line-Icons-Webfont/simple-line-icons.css" media="screen" />
+  <link rel="stylesheet" href="fonts/et-line-font/et-line-font.css">
+  <link rel="stylesheet" type="text/css" href="js/smart-forms/smart-forms.css">
+  <link rel="stylesheet" href="css/theme-responsive.css">
+
+
+
+  <link rel="stylesheet/less" type="text/css" href="less/skin.less">
+
+
+  <!--   Flask files -->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
+  <!-- CSS and LESS files -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='js/template-custom/css/template-custom.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme-default.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}" type="text/css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='js/mainmenu/menu.css') }}" type="text/css" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/font-awesome/css/font-awesome.min.css') }}"
+    type="text/css">
+  <link rel="stylesheet" type="text/css"
+    href="{{ url_for('static', filename='fonts/Simple-Line-Icons-Webfont/simple-line-icons.css') }}" media="screen" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='fonts/et-line-font/et-line-font.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='js/smart-forms/smart-forms.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme-responsive.css') }}">
+
+  <!-- LESS file (needs to be compiled to CSS or use less.js) -->
+  <!-- Option 1: Compile LESS to CSS and link the CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/skin.css') }}" type="text/css">
+  <!-- Option 2: Use less.js to compile LESS in the browser (not recommended for production) -->
+  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/4.1.0/less.min.js"></script> -->
+  <!-- <link rel="stylesheet/less" type="text/css" href="{{ url_for('static', filename='less/skin.less') }}"> -->
+
+
+
+  <style>
+    body {
+      color: #000000;
+    }
+
+
+    /* Targeting the links directly for hover effect */
+    .navbar-default .navbar-nav>li>a {
+      transition: all 0.3s ease;
+      /* Smooth transition for background and border changes */
+      padding: 10px 15px;
+      /* Adjust padding as needed */
+      margin: 5px 0;
+      /* Margin for spacing between menu items */
+      border: 3px solid transparent;
+      /* Initial border setting */
+    }
+
+    /* Adding the hover effect */
+    .navbar-default .navbar-nav>li>a:hover {
+      background-color: blue;
+      /* Background color change on hover */
+      color: white;
+      /* Text color change on hover, if needed */
+      border-color: blue;
+      /* Border color change on hover */
+    }
+  </style>
+
+<body class="loading">
+
+
+
+  <div class="preloader-wrap"></div>
+
+  <!-- Page template -->
+
+  <!-- Preloader icon -->
+
+  <div class="wrapper-boxed">
+    <div class="site-wrapper" style="position: relative;">
+      <div class="topbar light topbar-padding">
+        <div class="container">
+          <ul class="toplist toppadding">
+
+            <li class="lineright"><a href="#">Login</a></li>
+            <li class="lineright"><a href="#">Register</a></li>
+            <li><a href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/codelayers"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li class="last"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+
+      <!--end topbar-->
+
+      <div class="col-md-12 nopadding section-white">
+        <div id="header">
+          <div class="container">
+            <div class="navbar brown-2 navbar-default yamm">
+              <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid"
+                  class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span
+                    class="icon-bar"></span></button>
+                <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.svg') }}"
+                    alt="logo" style="width:150px;"></a>
+              </div>
+              <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
+                <ul class="nav navbar-nav" style="font-size: large; padding-top: 25px;">
+                  <li class="dropdown"> <a href="index.html" class="dropdown-toggle ">Home</a>
+                  </li>
+                  <li class="dropdown"> <a href="contact.html" class="dropdown-toggle">Register</a>
+
+                  </li>
+                  <li> <a href="domain-search.html" class="dropdown-toggle">About Us</a></li>
+
+
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end menu-->
+      </div>
+      <!--end menu-->
+
+      <div class="clearfix"></div>
+      <section class="sec-padding section-dark text-center">
+        <div class="container">
+          <div class="row">
+            <h1 class="text-white uppercase font-weight-7">We are Host Linea</h1>
+            <h5 class="text-normal">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et justo.
+              <br />
+              Praesent mattis commodo augue. Aliquam
+            </h5>
+            <br />
+            <a href="#" class="btn btn-bgprimary">Get Started</a>
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!-- end section -->
+
+      <section>
+        <div class="pagenation-holder">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-6">
+                <!-- <h4>Contact Style 1</h4> -->
+              </div>
+              <div class="col-md-6 text-right">
+                <div class="pagenation_links"><a href="index.html">Home</a><i> / </i> <a href="index.html">Contact</a>
+                  <!-- <i> / </i> Contact Style 1 -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!--end section-->
+
+
+      <section class="sec-padding">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-8">
+              <div class="smart-forms bmargin">
+
+                <h3>Contact Form</h3>
+
+
+
+                <form method="post" action="/contact" id="smart-form">
+                  <div>
+                    <div class="section">
+                      <label class="field prepend-icon">
+                        <input type="text" name="name" id="sendername" class="gui-input" placeholder="Enter name">
+                        <span class="field-icon"><i class="fa fa-user"></i></span> </label>
+                    </div>
+
+
+                    <div class="section colm colm6">
+                      <label class="field prepend-icon">
+                        <input type="number" name="contact" id="telephone" class="gui-input" placeholder="Contact">
+                        <span class="field-icon"><i class="fa fa-phone-square"></i></span> </label>
+                    </div>
+
+
+                    <div class="section">
+                      <label class="field prepend-icon">
+                        <textarea class="gui-textarea" id="sendermessage" name="address" placeholder="Enter Address"
+                          required></textarea>
+                        <span class="field-icon"><i class="fa fa-comments"></i></span>
+                        <!-- <span class="input-hint">  -->
+                        <!-- <strong>Hint:</strong> Please enter between 80 - 300 characters.</span> </label> -->
+                    </div>
+                    <!-- end section -->
+
+
+                    <div class="result"></div>
+                    <!-- end .result  section -->
+
+                  </div>
+                  <!-- end .form-body section -->
+                  <div>
+                    <button type="submit" data-btntext-sending="Sending..." class="btn btn-bgprimary"
+                      style="background-color: blue;">Submit</button>
+                    <!-- <button type="reset" class="button"> Cancel </button> -->
+                  </div>
+                  <!-- end .form-footer section -->
+                </form>
+              </div>
+              <!-- end .smart-forms section -->
+            </div>
+
+
+            <div class="col-md-4">
+              <br />
+              <h4>Address Info</h4>
+              No.28 - 63739 street lorem ipsum City, Country <br />
+              Telephone: +1 1234-567-89000<br />
+              FAX: +1 0123-4567-8900<br />
+              <br />
+              E-mail: <a href="mailto:email@example.com">email@example.com</a><br />
+              <!-- Website: <a href="index.html">www.example.com</a> -->
+              <div class="clearfix"></div>
+              <br /><br />
+              <!-- <h4>Find the Address</h4>
+
+              <div id="map_addresses" class="map">
+                <p>This will be replaced with the Google Map.</p>
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--end section-->
+      <div class="clearfix"></div>
+      <section class="section-primary">
+        <div class="container sec-tpadding-1 sec-bpadding-1">
+          <div class="row">
+            <div class="col-md-9">
+              <h3 class="text-white">Over 4 million customers trust our services and servers</h3>
+            </div>
+            <div class="col-md-3">
+              <div class="margin-top2"></div>
+              <a class="btn btn-border white btn-large pull-right" href="#">Sign Up Now !</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="clearfix"></div>
+      <!--end section-->
+
+
+      <!--end wrapper boxed-->
+
+      <!-- Scripts -->
+      <script src="js/jquery/jquery.min.js"></script>
+      <script src="js/bootstrap/js/bootstrap.min.js"></script>
+
+      <script src="js/less/less.min.js" data-env="development"></script>
+      <script src="js/sticky/js/jquery.sticky.js"></script>
+      <!-- Scripts END -->
+
+      <!-- Template scripts -->
+      <script src="js/mainmenu/customeUI.js"></script>
+      <script src="js/template-custom/js/template-custom.js"></script>
+      <script type="text/javascript" src="js/smart-forms/jquery.form.min.js"></script>
+      <script type="text/javascript" src="js/smart-forms/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="js/smart-forms/additional-methods.min.js"></script>
+      <script type="text/javascript" src="js/smart-forms/smart-form.js"></script>
+      <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+      <script type="text/javascript" src="js/gmaps/jquery.gmap.js"></script>
+      <script type="text/javascript" src="js/gmaps/examples.js"></script>
+      <script src="js/functions/functions.js"></script>
+
+
+      <!-- flask scripts -->
+      <!-- jQuery -->
+      <script src="{{ url_for('static', filename='js/jquery/jquery.min.js') }}"></script>
+      <!-- Bootstrap -->
+      <script src="{{ url_for('static', filename='js/bootstrap/js/bootstrap.min.js') }}"></script>
+      <!-- LESS -->
+      <script src="{{ url_for('static', filename='js/less/less.min.js') }}" data-env="development"></script>
+      <!-- Sticky -->
+      <script src="{{ url_for('static', filename='js/sticky/js/jquery.sticky.js') }}"></script>
+      <!-- Custom UI -->
+      <script src="{{ url_for('static', filename='js/mainmenu/customeUI.js') }}"></script>
+      <!-- Template custom -->
+      <script src="{{ url_for('static', filename='js/template-custom/js/template-custom.js') }}"></script>
+      <!-- Smart forms -->
+      <script src="{{ url_for('static', filename='js/smart-forms/jquery.form.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/smart-forms/jquery.validate.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/smart-forms/additional-methods.min.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/smart-forms/smart-form.js') }}"></script>
+      <!-- Google Maps -->
+      <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+      <script src="{{ url_for('static', filename='js/gmaps/jquery.gmap.js') }}"></script>
+      <script src="{{ url_for('static', filename='js/gmaps/examples.js') }}"></script>
+      <!-- Functions -->
+      <script src="{{ url_for('static', filename='js/functions/functions.js') }}"></script>
+
+</body>
+
+</html>

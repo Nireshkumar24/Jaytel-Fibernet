@@ -1,0 +1,694 @@
+// Variables
+// =========
+
+// Colors
+@colorPrimary: #17a6ef;
+@colorSecondary: #b2c81e;
+@colorTertiary: #38cef9;
+@colorBg: #ffffff;
+@bradius: 5px;
+// Metrics
+@boxWidth: 1240px;
+
+// Other
+@layoutType: "wide";
+@borderType: "square";
+
+@outerBgType: "color";
+@outerBgColor: @colorSecondary;
+@outerBgImage: "";
+
+@preloader: "";
+
+// Mixins
+.animation(@animation) {
+  -webkit-animation: @animation;
+          animation: @animation;
+}
+.transform(@transform) {
+  -webkit-transform: @transform;
+      -ms-transform: @transform; // IE9 only
+          transform: @transform;
+}
+
+
+// Styles
+// ======
+
+// Backgrounds
+body {
+	background: @colorBg !important;
+}
+body when (@layoutType = "boxed") and (@outerBgType = "color") {
+	background: @outerBgColor !important;
+}
+body when (@layoutType = "boxed") and (@outerBgType = "pattern") and not (@outerBgImage = "") {
+	background: url(@outerBgImage) @colorBg repeat left top !important;
+}
+html when (@layoutType = "boxed") and (@outerBgType = "image") and not (@outerBgImage = "") {
+	height: 100%;
+	background: url(@outerBgImage) @colorBg repeat center top / cover fixed !important;
+}
+body when (@layoutType = "boxed") and (@outerBgType = "image") {
+	background: none !important;
+}
+
+// Layout
+.wrapper-boxed when (@layoutType = "boxed") {
+	max-width: @boxWidth;
+}
+
+// Colors
+.navbar a.active,
+.navbar a:hover {
+	color: @colorPrimary !important;
+}
+.text-color-primary {
+	color: @colorPrimary !important;
+}
+.bg-color-primary {
+	background-color: @colorPrimary;
+}
+.bg-color-secondary {
+	background-color: @colorSecondary;
+}
+.bg-color-tertiary {
+	background-color: @colorTertiary;
+}
+.btn.btn-color-primary {
+	background-color: @colorPrimary;
+}
+//slider colors
+.ms-layer.btn.sbut1 {
+    color: @colorPrimary;
+}
+.ms-layer.offerbadge, .ms-layer.btn.sbut1:hover {
+    color: #fff;
+    background-color: @colorPrimary;
+}
+
+//theme styles
+
+.section-primary {
+	background-color: @colorPrimary;
+}
+.iconlist.primary li i {
+	color: @colorPrimary;
+}
+.feature-box-1:hover .iconbox-small, .feature-box-1:hover .iconbox-tiny, .feature-box-1.active .iconbox-small, .feature-box-1.active .iconbox-tiny {
+	border:1px solid @colorPrimary;
+	background-color:@colorPrimary;
+}
+.feature-box-2 .price-badge, .feature-box-3 .offerbadge  {
+	background-color:@colorPrimary;
+}
+.slide-controls-primary .owl-theme .owl-controls .owl-page span, .pricetable-holder1.active, .team-holder-1 .image-holder .hover-box, 
+.footer-social-icons li a:hover, .btn.btn-bgprimary, .ms-layer.btn.sbut3, .feature-box-9 .offerbadge {
+	background: @colorPrimary;
+}
+.tabstyle-1 .responsive-tabs li a:hover, .tabstyle-1 .responsive-tabs li.active, .tabstyle-1 .responsive-tabs li.active a, .feature-box-5:hover .title, .feature-box-5.active .title  {
+	color: @colorPrimary;
+}
+.section-overlay.bg-primary {
+	background: fadeout(@colorPrimary, 6%);
+}
+
+.feature-box-5:hover .iconbox-small, .feature-box-5:hover .iconbox-tiny, .feature-box-5.active .iconbox-small, .feature-box-5.active .iconbox-tiny, 
+.feature-box-7:hover, .feature-box-7.active {
+	border:1px solid @colorPrimary;
+	background-color:@colorPrimary;
+}
+.scrollup {
+	background: @colorPrimary url(../images/scroll-top-arrow.png) no-repeat 15px 16px;
+}
+.ms-layer.text4 i {
+	color: @colorPrimary;
+}
+.pricetable-holder-1.active {
+    background-color: @colorPrimary;
+}
+.pricetable-holder-2.active {
+	background-color:@colorPrimary;
+}
+.pricetable-holder-2.active .features-list li:nth-child(even) {
+	background-color:@colorPrimary;
+}
+.pricetable-active-bg-strip {
+	background-color:@colorPrimary;
+}
+.feature-box-11:hover .iconbox-smedium, .feature-box-11.active .iconbox-smedium {
+	background-color:@colorPrimary;
+	border:1px solid @colorPrimary;
+}
+.tabstyle-2 .responsive-tabs li a:hover, .tabstyle-2 .responsive-tabs li.active, .tabstyle-2 .responsive-tabs li.active a {
+	border-right:1px solid @colorPrimary;
+	background-color: @colorPrimary;
+}
+.pricetable-holder-3.active {
+	background-color:@colorPrimary;
+}
+.pricetable-holder-3.active .features-list li:nth-child(even) {
+	background-color:@colorPrimary;
+}
+.domain-search-home-2 #search-submit {
+	background-color:@colorPrimary;
+}
+.feature-box-12:hover .text-box, .feature-box-12.active .text-box {
+	background-color:@colorPrimary;
+	border:1px solid @colorPrimary;
+}
+a.read-more.dark:hover {
+	color: @colorPrimary;
+}
+.pricetable-holder-4.active {
+	background-color:@colorPrimary;	
+}
+.feature-box-15 .price-badge {
+	background-color:@colorPrimary;	
+}
+.btn.btn-border:hover.primary {
+	border-color:@colorPrimary;
+	background-color:@colorPrimary;
+}
+.btn.btn-border.primary {
+	color:@colorPrimary;
+	border-color:@colorPrimary;
+}
+.tabstyle-3 .responsive-tabs li a:hover, .tabstyle-3 .responsive-tabs li.active, .tabstyle-3 .responsive-tabs li.active a {
+	color: @colorPrimary;
+}
+
+.feature-box-5:hover .iconcircle-small, .feature-box-5:hover .iconcircle-tiny, .feature-box-5.active .iconcircle-small,
+ .feature-box-5.active .iconcircle-tiny {
+	border-color:@colorPrimary;
+	background-color:@colorPrimary;
+}
+.pricetable-holder-5.active {
+    background-color: @colorPrimary;
+}
+.pricetable-holder-5.active .features-list li:nth-child(even) {
+    background-color: @colorPrimary;
+}
+.feature-box-17 .price-badge {
+    background-color: @colorPrimary;
+}
+nav ul li a.active, nav ul li a:hover {
+        color: @colorPrimary;
+    }
+#domain-search-holder #searchsubmit {
+	background-color: @colorPrimary;
+}
+.feature-box-18:hover .text-box, .feature-box-18.active .text-box {
+	border-color:@colorPrimary;
+	background-color:@colorPrimary;
+}
+.help-sear-holder #search-btn {
+	background-color: @colorPrimary;
+}
+.smart-forms .btn-primary.bgprimary {  
+background-color: @colorPrimary; 
+}
+
+.iconbox-dxlarge.color-primary, .iconbox-xlarge.color-primary, .iconbox-large.color-primary, .iconbox-xmedium.color-primary, .iconbox-medium.color-primary, .iconbox-smedium.color-primary, .iconbox-small.color-primary, .iconbox-tiny.color-primary, .iconbox-xtiny.color-primary {
+	background-color: @colorPrimary;
+}
+.table-style-2 th {
+	background: @colorPrimary;
+}
+.post-date-box {
+	background-color: @colorPrimary;
+}
+
+.blog-holder-1 .image-holder .overlay .icon {
+    background-color: @colorPrimary;
+}
+.blog-holder-1 .image-holder .overlay .icon:hover {
+    color: @colorPrimary;
+}
+
+.blog-pagenation li a:hover, .blog-pagenation li a.active {
+	border:1px solid @colorPrimary;
+	background-color:@colorPrimary;
+}
+.category-links li a:hover, .category-links li a.active {
+	color: @colorPrimary;
+}
+.tags-2 li a:hover, .tags-2 li a.active {
+	border:1px solid @colorPrimary;
+	background-color: @colorPrimary;
+}
+.sidebar-posts:hover h6, .sidebar-posts.active h6 {
+	color: @colorPrimary;
+}
+.social-icons-1 li a {
+	background-color: @colorPrimary;
+}
+a.loadmore-but {
+	background-color: @colorPrimary;
+}
+.cbp-l-filters-button.two .cbp-filter-item.cbp-filter-item-active {
+	border-bottom: 2px solid @colorPrimary;
+}
+.cbp-l-filters-button.two .cbp-filter-item:hover {
+	color: @colorPrimary;
+}
+.cbp-l-filters-button.two .cbp-filter-counter:before {
+	border-top: 4px solid @colorPrimary;
+}
+.cbp-l-filters-button.two .cbp-filter-counter {
+	background-color: @colorPrimary;
+}
+.cbp-l-filters-button.three .cbp-filter-item.cbp-filter-item-active {
+	color: @colorPrimary;
+}
+#header-2 {
+	border-bottom:1px solid @colorPrimary;
+}
+.error-search-box .input_submit {
+	border:1px solid @colorPrimary;
+	background-color:@colorPrimary;
+}
+
+
+//layout classic-2
+.feature-box-19:hover, .feature-box-19.active {
+	background-color: @colorPrimary;
+}
+.pricetable-holder-6 .price-circle .price {
+    color: @colorPrimary;
+}
+.pricetable-holder-6.active {
+    background-color: @colorPrimary;
+}
+.feature-box-21:hover, .feature-box-21.active {
+	background-color: @colorPrimary;
+}
+.feature-box-21:hover .arrow-up, .feature-box-21.active .arrow-up {
+	border-bottom: 20px solid @colorPrimary;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Border roundness
+.btn when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.ms-layer.btn when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.pricetable-holder1 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tabstyle-1 .responsive-tabs li when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tab-content-holder when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.feature-box-5 .iconbox-tiny when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.feature-box7 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.team-holder-1 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.team-holder-1 .image-holder when (@borderType = "rounded") {
+		border-top-left-radius:@bradius;
+		border-top-right-radius:@bradius;
+}
+.footer-social-icons li a when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.scrollup when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.text-box when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.pricetable-holder-1 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+
+.tabstyle-2 .responsive-tabs li when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tab-navbar-main-style-2 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tabstyle-2 .responsive-tabs li.active when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tabstyle-2 .responsive-tabs li.active a when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tab-content-style-2 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.pricetable-holder-2 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.pricetable-holder-3 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.feature-box-14 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-dxlarge when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-xlarge when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-large when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-xmedium when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-medium when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-smedium when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-small when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-tiny when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.iconbox-xtiny when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.pricetable-holder-4 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tab-navbar-main-style-3 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tab-content-style-3 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.feature-box-16 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.feature-box-7 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+
+#domain-search-holder #dsearch when (@borderType = "rounded") {
+	border-top-left-radius: @bradius;
+	border-bottom-left-radius: @bradius;
+}
+#domain-search-holder #searchsubmit when (@borderType = "rounded") {
+	border-top-right-radius: @bradius;
+	border-bottom-right-radius: @bradius;
+}
+
+.domain-pricing-table-holder when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+
+.post-date-box when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.blog-pagenation li a when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.tags-2 li a when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.social-icons-1 li a when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+a.loadmore-but when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+
+
+
+// layout classic-2
+
+.feature-box-19 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.pricetable-holder-6 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+.feature-box-21 when (@borderType = "rounded") {
+	border-radius: @bradius;
+}
+
+
+
+// Temp
+// Current temp template's fixes
+#header {
+	margin: 0 auto;
+}
+
+
+// Preloader
+.preloader when not (@preloader = "") {
+	position: fixed;
+	z-index: 999999;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	font-size: 120px;
+	text-align: center;
+	line-height: 100vh;
+	background: @colorBg;
+	transition: .4s;
+
+	.loader-icon * {
+		fill: @colorPrimary;
+	}
+}
+body when not (@preloader = "") {
+	&.loading {
+		overflow: hidden;
+	}
+	&:not(.loading) {
+		.preloader {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+}
+
+
+// Preloader types
+body.loading when (@preloader = "dots-in-circle") {
+	.loader-dots-in-circle {
+		.animation(loader-spin 1s steps(8) infinite);
+	}
+}
+body when (@preloader = "dots-in-circle"), (@preloader = "circle"), (@preloader = "cog") {
+	@-webkit-keyframes loader-spin {
+		to {
+			.transform(rotate(360deg));
+		}
+	}
+	@keyframes loader-spin {
+		to {
+			.transform(rotate(360deg));
+		}
+	}
+}
+
+body.loading when (@preloader = "rectangles") {
+	.loader-rectangles {
+		> .loader-anim-item {
+			.animation(loader-scale 1s linear infinite);
+			.transform(scale(.4));
+			-webkit-transform-origin: center;
+			transform-origin: center;
+
+			&:nth-child(2) {
+				-webkit-animation-delay: .15s;
+				animation-delay: .15s;
+			}
+			&:nth-child(3) {
+				-webkit-animation-delay: .3s;
+				animation-delay: .3s;
+			}
+		}
+	}
+
+	@-webkit-keyframes loader-scale {
+		0% {
+			.transform(scale(.4));
+		}
+		30% {
+			.transform(none);
+		}
+		60% {
+			.transform(scale(.4));
+		}
+		100% {
+			.transform(scale(.4));
+		}
+	}
+	@keyframes loader-scale {
+		0% {
+			.transform(scale(.4));
+		}
+		30% {
+			.transform(none);
+		}
+		60% {
+			.transform(scale(.4));
+		}
+		100% {
+			.transform(scale(.4));
+		}
+	}
+}
+
+body.loading when (@preloader = "circles") {
+	.loader-circles {
+		 > .loader-anim-item {
+			opacity: 0;
+			.animation(loader-opacity 1s linear infinite);
+
+			&:nth-child(2) {
+				-webkit-animation-delay: .15s;
+				animation-delay: .15s;
+			}
+			&:nth-child(3) {
+				-webkit-animation-delay: .3s;
+				animation-delay: .3s;
+			}
+		}
+	}
+
+	@-webkit-keyframes loader-opacity {
+		0% {
+			opacity: 0;
+		}
+		40% {
+			opacity: 1;
+		}
+		80% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+	@keyframes loader-opacity {
+		0% {
+			opacity: 0;
+		}
+		40% {
+			opacity: 1;
+		}
+		80% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 0;
+		}
+	}
+}
+
+body.loading when (@preloader = "circle") {
+	.loader-circle {
+		.animation(loader-spin 1s linear infinite);
+		-webkit-transform-origin: center;
+		transform-origin: center;
+	}
+}
+
+body.loading when (@preloader = "ovals-in-circle") {
+	.loader-ovals-in-circle .loader-anim-item {
+		.animation(loader-opacity-2 10s linear infinite);
+
+		&:nth-child(2) {
+			-webkit-animation-delay: 0.08s;
+			animation-delay: 0.08s;
+		}
+		&:nth-child(3) {
+			-webkit-animation-delay: 0.17s;
+			animation-delay: 0.17s;
+		}
+		&:nth-child(4) {
+			-webkit-animation-delay: 0.25s;
+			animation-delay: 0.25s;
+		}
+		&:nth-child(5) {
+			-webkit-animation-delay: 0.42s;
+			animation-delay: 0.42s;
+		}
+		&:nth-child(6) {
+			-webkit-animation-delay: 0.5s;
+			animation-delay: 0.5s;
+		}
+		&:nth-child(7) {
+			-webkit-animation-delay: 0.58s;
+			animation-delay: 0.58s;
+		}
+		&:nth-child(8) {
+			-webkit-animation-delay: 0.66s;
+			animation-delay: 0.66s;
+		}
+		&:nth-child(9) {
+			-webkit-animation-delay: 0.75s;
+			animation-delay: 0.75s;
+		}
+		&:nth-child(10) {
+			-webkit-animation-delay: 0.83s;
+			animation-delay: 0.83s;
+		}
+		&:nth-child(11) {
+			-webkit-animation-delay: 0.91s;
+			animation-delay: 0.91s;
+		}
+		&:nth-child(12) {
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+
+	@-webkit-keyframes loader-opacity-2 {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+	@keyframes loader-opacity-2 {
+		from {
+			opacity: 1;
+		}
+		to {
+			opacity: 0;
+		}
+	}
+}
+
+
+
+body.loading when (@preloader = "cog") {
+	.loader-cog {
+		.animation(loader-spin 3s linear infinite);
+	}
+}

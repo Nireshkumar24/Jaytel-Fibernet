@@ -1,0 +1,11 @@
+/* Sticky nav */
+.is-sticky .navbar-brand {
+	padding: 10px;
+}
+.is-sticky .navbar-header img {
+	max-height: 100%;
+}
+.is-sticky .navbar-nav > li > a {
+	padding-bottom: 15px;
+	padding-top: 15px;
+}
