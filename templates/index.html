@@ -5,9 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Internet Service Provider</title>
-  <meta name="keywords" content="hostlinea, themeforest, envatoelements, codelayers, website templates " />
-  <meta name="description" content="Hostlinea hosting HTML5 Template">
-  <meta name="author" content="codelayers">
+  <meta name="keywords" content="Take your Internet" />
+  <meta name="description" content="Internet service provider">
+  <meta name="author" content="ISP Provider , Internet">
+  <meta name="description"
+    content="Jaytel Fibernet provides high-speed internet services to residential and business customers Chittoor.">
+  <meta name="keywords"
+    content="Jaytel Fibernet, Internet Service Provider, High-Speed Internet, Broadband, Fibernet Chittoor">
 
   <!-- Mobile view -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -201,7 +205,6 @@
       justify-content: center;
       align-items: center;
       height: 80px;
-      /* Adjust based on your navbar's height */
     }
 
     /* Styling the image within the navbar-brand */
@@ -213,56 +216,71 @@
       /* Adjust the padding to ensure it doesn't touch other elements */
     }
 
-
-    /* table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-
-    th,
-    td {
-      border: 1px solid #ddd;
-      text-align: left;
-      padding: 8px;
-    }
-
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
-
-    @media (max-width: 600px) {
-      thead {
-        display: none;
-      }
-
-      table,
-      tbody,
-      tr,
-      td {
-        display: block;
-        width: 100%;
-      }
-
-      tr {
-        margin-bottom: 15px;
-      }
-
-      td {
-        text-align: right;
-        padding-left: 50%;
-        position: relative;
-      }
-
-      td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0;
-        width: 50%;
-        padding-left: 15px;
-        font-weight: bold;
-        text-align: left;
-      }
+    /* #toggleTerms {
+      color: blue;
+      text-decoration: underline;
+      display: block;
+      padding-left: 10%;
+      padding-top: 20px;
     } */
+
+    #myBtn {
+      color: blue;
+      text-decoration: underline;
+      display: block;
+      padding-left: 10%;
+      padding-top: 20px;
+      cursor: pointer;
+
+    }
+
+
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.4);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      /* 15% from the top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      /* Could be more or less, depending on screen size */
+    }
+
+    /* The Close Button */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -276,13 +294,12 @@
 
   <!-- Preloader icon -->
 
-  <div class="wrapper-boxed">
+  <!-- <div class="wrapper-boxed">
     <div class="site-wrapper" style="position: relative;;">
       <div class="topbar light topbar-padding">
         <div class="container">
           <ul class="toplist toppadding">
-            <li class="lineright"><a href="{{ url_for('login') }}">Admin Login</a></li>
-            <li class="lineright"><a href="#">Register</a></li>
+            <li class="lineright"><a href="{{ url_for('contact') }}">Register</a></li>
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -290,99 +307,98 @@
           </ul>
         </div>
       </div>
-      <div class="clearfix"></div>
+      <div class="clearfix"></div> -->
 
-      <!--end topbar-->
+  <!--end topbar-->
 
-      <div class="col-md-12 nopadding">
-        <div id="header">
-          <div class="container">
-            <div class="navbar navbar-default yamm">
-              <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid"
-                  class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span
-                    class="icon-bar"></span></button>
-                <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.svg') }}"
-                    alt="logo" style="width:100px; padding-bottom:10px ;"></a>
-              </div>
-              <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
-                <ul class="nav navbar-nav" style="font-size: large; padding-top: 20px; color: #555555;">
-                  <li class="dropdown"> <a href="{{ url_for('index') }}" class="dropdown-toggle">Home</a>
+  <div class="col-md-12 nopadding">
+    <div id="header">
+      <div class="container">
+        <div class="navbar navbar-default yamm">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid"
+              class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span
+                class="icon-bar"></span></button>
+            <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.svg') }}"
+                alt="logo" style="width:100px; padding-bottom:10px ;"></a>
+          </div>
+          <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
+            <ul class="nav navbar-nav" style="font-size: large; padding-top: 20px; color: #555555;">
+              <li class="dropdown"> <a href="{{ url_for('index') }}" class="dropdown-toggle">Home</a>
 
-                  </li>
+              </li>
 
-                  <li> <a href="{{ url_for('contact') }}" class="dropdown-toggle">Register</a></li>
+              <li> <a href="{{ url_for('contact') }}" class="dropdown-toggle">Register</a></li>
 
-                  <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">About Us</a></li>
-                  <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">Speed Test</a></li>
-
-
+              <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">About Us</a></li>
+              <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">Speed Test</a></li>
 
 
-                </ul>
-              </div>
-            </div>
+
+
+            </ul>
           </div>
         </div>
       </div>
-      <!--end menu-->
+    </div>
+  </div>
+  <!--end menu-->
 
-      <div class="clearfix"></div>
+  <div class="clearfix"></div>
 
-      <!-- masterslider -->
-      <div class="master-slider ms-skin-default" id="masterslider">
+  <!-- masterslider -->
+  <div class="master-slider ms-skin-default" id="masterslider">
 
-        <!-- slide 1 -->
-        <div class="ms-slide slide-1" data-delay="9"> <img src="{{ url_for('static', filename='images/index1.jpg') }}"
-            alt="">
+    <!-- slide 1 -->
+    <div class="ms-slide slide-1" data-delay="9"> <img src="{{ url_for('static', filename='images/index1.jpg') }}"
+        alt="">
 
-          <h3 class="ms-layer offerbadge orange-2" style="top: 350px; left:1000px; background-color: blue;"
-            data-type="text" data-delay="500" data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)">
-            Starting at <br />
-            <span class="price">₹ 199</span><br />
-            /mo
-          </h3>
-          <h3 class="ms-layer offerbadge orange-2" style="top: 200px; left:800px; background-color: rgb(75, 168, 32);"
-            data-type="text" data-delay="1000" data-ease="easeOutExpo" data-duration="1230"
-            data-effect="scale(1.5,1.6)"> <b> 6</b> /mo Plan <br />
-            <span class="price">1194</span><br />
-            1 Month Free
-          </h3>
-          <h3 class="ms-layer offerbadge orange-2" style="top: 300px; left:600px; background-color:  #ab34eb;"
-            data-type="text" data-delay="1500" data-ease="easeOutExpo" data-duration="1230"
-            data-effect="scale(1.5,1.6)">
-            <b> 12</b> /mo Plan <br />
-            <span class="price">2388</span><br />
-            2 Months Free
-          </h3>
-
+      <h3 class="ms-layer offerbadge orange-2" style="top: 350px; left:1000px; background-color: blue;" data-type="text"
+        data-delay="500" data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)">
+        Starting at <br />
+        <span class="price">₹ 199</span><br />
+        /mo
+      </h3>
+      <h3 class="ms-layer offerbadge orange-2" style="top: 200px; left:800px; background-color: rgb(75, 168, 32);"
+        data-type="text" data-delay="1000" data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)">
+        <b> 6</b> /mo Plan <br />
+        <span class="price">1194</span><br />
+        1 Month Free
+      </h3>
+      <h3 class="ms-layer offerbadge orange-2" style="top: 300px; left:600px; background-color:  #ab34eb;"
+        data-type="text" data-delay="1500" data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)">
+        <b> 12</b> /mo Plan <br />
+        <span class="price">2388</span><br />
+        2 Months Free
+      </h3>
 
 
-          <h3 class="ms-layer text1" style="left: 140px;top: 200px;" data-type="text" data-delay="2500"
-            data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)"> Jaytel Fibernet (OPC) </h3>
 
-          <h5 class="ms-layer text2 margin-top" style="left: 140px;top: 240px;" data-type="text" data-delay="3000"
-            data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)"> </h5>
+      <h3 class="ms-layer text1" style="left: 140px;top: 200px;" data-type="text" data-delay="2500"
+        data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)"> Jaytel Fibernet (OPC) </h3>
 
-          <h3 class="ms-layer text3 align-left margin-top" style="left: 140px; top: 310px;" data-type="text"
-            data-effect="top(45)" data-duration="2000" data-delay="3500" data-ease="easeOutExpo"> ISP Providers
-          </h3>
+      <h5 class="ms-layer text2 margin-top" style="left: 140px;top: 240px;" data-type="text" data-delay="3000"
+        data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)"> </h5>
 
-          <a class="ms-layer btn sbut3 margin-top2" style="left: 140px; top: 420px; color: blue;" data-type="text"
-            data-delay="4000" data-ease="easeOutExpo" data-duration="1200" data-effect="scale(1.5,1.6)"> Get Started now
-          </a>
+      <h3 class="ms-layer text3 align-left margin-top" style="left: 140px; top: 310px;" data-type="text"
+        data-effect="top(45)" data-duration="2000" data-delay="3500" data-ease="easeOutExpo"> ISP Providers
+      </h3>
 
-        </div>
-        <!-- end slide 1 -->
+      <a class="ms-layer btn sbut3 margin-top2" style="left: 140px; top: 420px; color: blue;" data-type="text"
+        data-delay="4000" data-ease="easeOutExpo" data-duration="1200" data-effect="scale(1.5,1.6)"> Get Started now
+      </a>
 
-        <!-- slide 2 -->
-        <!-- <div class="ms-slide slide-1" data-delay="9"> <img src="{{ url_for('static', filename='images/index2.jpg') }}"
+    </div>
+    <!-- end slide 1 -->
+
+    <!-- slide 2 -->
+    <!-- <div class="ms-slide slide-1" data-delay="9"> <img src="{{ url_for('static', filename='images/index2.jpg') }}"
             alt="" style="transform: scaleX(-1);">
 
           <img src="" alt="" style="left:40px; top:210px;" class="ms-layer" data-type="image" data-delay="1000"
             data-duration="2500" data-ease="easeOutExpo" data-effect="scalefrom(1.1,1.1,190,0)" /> -->
 
-        <!-- <h3 class="ms-layer offerbadge orange-2" style="top: 150px; left:550px;" data-type="text" data-delay="1500"
+    <!-- <h3 class="ms-layer offerbadge orange-2" style="top: 150px; left:550px;" data-type="text" data-delay="1500"
             data-ease="easeOutExpo" data-duration="1230" data-effect="scale(1.5,1.6)"> Starting at <br />
             <span class="price">$4.99</span><br />
             /mo
@@ -394,7 +410,7 @@
             /Offer
           </h3> -->
 
-        <!-- <h3 class="ms-layer text2 margin-top" style="right: 115px;top: 200px;" data-type="text" data-delay="3000"
+    <!-- <h3 class="ms-layer text2 margin-top" style="right: 115px;top: 200px;" data-type="text" data-delay="3000"
             data-ease="easeOutExpo" data-duration="1230" data-effect="left(250)">Hosting Servers </h3>
 
           <h3 class="ms-layer text4 margin-top2" style="top: 260px; left:840px;" data-type="text" data-delay="3500"
@@ -415,240 +431,264 @@
 
 
 
-        <!-- <a class="ms-layer btn sbut3 margin-top2" style="left: 840px; top: 440px; color: blue;" data-type="text"
+    <!-- <a class="ms-layer btn sbut3 margin-top2" style="left: 840px; top: 440px; color: blue;" data-type="text"
             data-delay="4000" data-ease="easeOutExpo" data-duration="1200" data-effect="scale(1.5,1.6)"> Get Started now
           </a>
 
         </div> -->
-        <!-- end slide 2 -->
+    <!-- end slide 2 -->
 
+
+
+
+  </div>
+  <div class="clearfix"></div>
+
+
+  <section class="sec-padding">
+    <!-- <div class="container"> -->
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <h3 class="uppercase font-weight-5 less-mar-1"></h3>
+        <!-- <div class="clearfix"></div>
+              <div class="title-line align-center"></div><br> -->
+        <!-- <p class="sub-title" >With Fibre technology backing you, get the greatest WiFi
+                for your house.</p> -->
+        <!-- <h2>With Fibre technology backing you, get the greatest WiFi
+                for your house.</h2> -->
+        <!-- <h2>Pay 6 months Get 1-month free....! </h2>
+              <h2>Pay 12 months Get 2-month free....! </h2> -->
+        <img src="{{ url_for('static', filename='images/Jaytel-Banner.svg') }}" alt="logo">
+
+
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <!--end section-->
+
+  <section class="sec-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h3 class="uppercase font-weight-5 less-mar-1">Our Plans</h3>
+          <div class="clearfix"></div>
+          <div class="title-line align-center"></div><br>
+          <p></p>
+          <!-- <p class="sub-title">Pay 12 months Get 2-month free....! </p> -->
+
+        </div>
+        <div class="clearfix"></div>
+        <!--end title-->
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="pricetable-holder-6  bottom-margin plan">
+            <h3 class="title font-weight-5 card_head" style="color: whitesmoke;">Basic</h3>
+            <div class="price-circle">
+              <div class="price"> <b style="color:black ;">1</b><br />
+                <i style="color: black;">Month</i>
+              </div>
+            </div>
+            <br />
+            <ul class="features-list">
+              <li>15 Mbps - 199</li>
+              <li>30 Mbps - 399</li>
+              <li>60 Mbps - 549 </li>
+              <li>100 Mbps - 699 </li>
+              <li>200 Mbps - 999 </li>
+              <li>300 Mbps - 1499 </li>
+
+            </ul>
+            <div class="clearfix"></div>
+            <br />
+            <br />
+            <a class="btn btn-light orderbtn" href="{{ url_for('contact') }}">Buy Now </a>
+          </div>
+        </div>
+
+
+        <!--end item-->
+
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <div class="pricetable-holder-6   bottom-margin plan">
+            <h3 class="title font-weight-5 card_head" style="color: whitesmoke;">Standard</h3>
+            <div class="price-circle">
+              <div class="price"> <b style="color:black ;">6</b><br />
+                <i style="color:black ;">Months</i>
+              </div>
+            </div>
+            <br />
+            <ul class="features-list">
+              <li>15 Mbps - 1194</li>
+              <li>30 Mbps - 2394</li>
+              <li>60 Mbps - 3294 </li>
+              <li>100 Mbps - 4194 </li>
+              <li>200 Mbps - 5994 </li>
+              <li>300 Mbps - 8994 </li>
+
+            </ul>
+            <div class="clearfix"></div>
+            <br />
+            <br />
+            <a class="btn btn-light orderbtn" href="{{ url_for('contact') }}">Buy Now </a>
+          </div>
+        </div>
+        <!--end item-->
+
+        <div class="col-md-4 col-sm-6 col-xs-12 ">
+          <div class="pricetable-holder-6  bottom-margin plan ">
+            <h3 class="title font-weight-5 card_head" style="color: whitesmoke;">Premium</h3>
+            <div class="price-circle">
+              <div class="price"> <b style="color:black ;">12</b><br />
+                <i style="color:black ;">Months</i>
+              </div>
+            </div>
+            <br />
+            <ul class="features-list">
+              <li>15 Mbps - 2388</li>
+              <li>30 Mbps - 4788</li>
+              <li>60 Mbps - 6588 </li>
+              <li>100 Mbps - 8388 </li>
+              <li>200 Mbps - 11988 </li>
+              <li>300 Mbps - 17988 </li>
+
+
+            </ul>
+            <div class="clearfix"></div>
+            <br />
+            <br />
+            <!-- <a class="btn btn-green-4 btn-round" href="#">Order Now !</a> -->
+            <a class="btn btn-light orderbtn" href="{{ url_for('contact') }}">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <a href="javascript:void(0)" id="toggleTerms" class="container">Show Terms and
+      Conditions</a> -->
+    <a id="myBtn">Conditions Apply...</a>
+
+  </section>
+  <div class="clearfix"></div>
+  <!-- end section -->
+
+
+
+
+  <!-- Terms and Conditions Section -->
+  <!-- <div class="container" id="termsContainer" style="padding-top: 30px; display: none;">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>Terms and Conditions :</h3>
+        <h4>Cancellation Policy</h4>
+        <p>All sales of Recharge are final and there will be no refund or exchange permitted. Please be advised that
+          you are responsible for the mobile number or user ID account you purchase Recharge for and all charges
+          that result from those purchases. Jaytel Fibernet is not responsible for any purchase of
+          Recharge for an incorrect mobile number or User ID account.</p>
+        <p>However, in a case where a transaction has been completed by you on the Site, and money has been charged
+          to your card or bank account but a Recharge has not been delivered within 24 hours of your completion of
+          the transaction then you may inform us by sending us an email on (info@jaytelfiber.com) or Contact US.
+          In such a scenario you will be entitled to a full refund. We request you to include in the email the
+          following details - the mobile number or User ID account, operator name, Recharge value, Transaction date,
+          and Order Number. Jaytel Fibernet shall investigate the incident and if it is found that
+          money was indeed charged to your card or bank account without delivery of the Recharge then you will be
+          refunded the money within 7 to 10 working days from the date of the receipt of your email.</p>
+        <h4>B2B Policy</h4>
+        <p>Any top-up payment/advance payment which is received from a client & if the client does not use the
+          amount for services for any reason and he wants his payment to return, in this case, after one month of
+          deposit, the customer needs to give a refund request to us. Once we will get a refund request from the
+          client, the balance amount will be refunded within 07 to 10 working days via the same source.</p>
+      </div>
+    </div>
+  </div> -->
+  <!-- End Terms and Conditions Section -->
+  <!-- <button id="myBtn">Show Terms and Conditions</button> -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="container" id="termsContainer" style="padding-top: 30px;">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3>Terms and Conditions :</h3>
+            <h4>Cancellation Policy</h4>
+            <p>All sales of Recharge are final and there will be no refund or exchange permitted. Please be advised that
+              you are responsible for the mobile number or user ID account you purchase Recharge for and all charges
+              that result from those purchases. Jaytel Fibernet is not responsible for any purchase of
+              Recharge for an incorrect mobile number or User ID account.</p>
+            <p>However, in a case where a transaction has been completed by you on the Site, and money has been charged
+              to your card or bank account but a Recharge has not been delivered within 24 hours of your completion of
+              the transaction then you may inform us by sending us an email on (info@jaytelfiber.com) or Contact US.
+              In such a scenario you will be entitled to a full refund. We request you to include in the email the
+              following details - the mobile number or User ID account, operator name, Recharge value, Transaction date,
+              and Order Number. Jaytel Fibernet shall investigate the incident and if it is found that
+              money was indeed charged to your card or bank account without delivery of the Recharge then you will be
+              refunded the money within 7 to 10 working days from the date of the receipt of your email.</p>
+            <h4>B2B Policy</h4>
+            <p>Any top-up payment/advance payment which is received from a client & if the client does not use the
+              amount for services for any reason and he wants his payment to return, in this case, after one month of
+              deposit, the customer needs to give a refund request to us. Once we will get a refund request from the
+              client, the balance amount will be refunded within 07 to 10 working days via the same source.</p>
+
+            <div style="display: flex; justify-content: flex-end;">
+              <button class="btn btn-primary" id="okBtn" style="margin-top: 20px;">OK</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+  <section class="sec-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+          <h3 class="uppercase font-weight-5 less-mar-1">Reach Us</h3>
+          <div class="clearfix"></div>
+          <div class="title-line align-center"></div>
+          <!-- <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo.
+                Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p> -->
+        </div>
+        <div class="clearfix"></div>
+        <!--end title-->
+        <br />
+
+        <div class="col-md-12 col-sm-12" style="text-align: center; justify-content: center;">
+          <div class="iconcircle-medium white">
+            <!-- <span class="material-symbols-outlined">
+                </span> --><img src="{{ url_for('static', filename='images/support_agent.svg') }}" alt="contact"
+              height="60" width="60">
+
+          </div>
+          <div class="feature-box-21 text-center bottom-margin">
+            <div></div>
+            <br />
+            <h1>Jaytel Solutions (OPC) Pvt,Ltd. Chittoor</h1>
+            <h3 class="title">Mobile : 6305256722</h3>
+            <p>Web Page :<a href=""></a> Jaytel.in</p>
+          </div>
+        </div>
+        <!--end item-->
 
 
 
       </div>
-      <div class="clearfix"></div>
-
-
-      <section class="sec-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 text-center">
-              <h3 class="uppercase font-weight-5 less-mar-1">What We Offer</h3>
-              <!-- <div class="clearfix"></div>
-              <div class="title-line align-center"></div><br> -->
-              <!-- <p class="sub-title" >With Fibre technology backing you, get the greatest WiFi
-                for your house.</p> -->
-              <!-- <h2>With Fibre technology backing you, get the greatest WiFi
-                for your house.</h2> -->
-              <h2>Pay 6 months Get 1-month free....! </h2>
-              <h2>Pay 12 months Get 2-month free....! </h2>
-
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-
-      <!--end section-->
-
-      <section class="sec-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 text-center">
-              <h3 class="uppercase font-weight-5 less-mar-1">Our Plans</h3>
-              <div class="clearfix"></div>
-              <div class="title-line align-center"></div><br>
-              <p></p>
-              <!-- <p class="sub-title">Pay 12 months Get 2-month free....! </p> -->
-
-            </div>
-            <div class="clearfix"></div>
-            <!--end title-->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="pricetable-holder-6  bottom-margin plan">
-                <h3 class="title font-weight-5 card_head" style="color: whitesmoke;">Basic</h3>
-                <div class="price-circle">
-                  <div class="price"> <b style="color:black ;">1</b><br />
-                    <i style="color: black;">Month</i>
-                  </div>
-                </div>
-                <br />
-                <ul class="features-list">
-                  <li>15 Mbps - 199</li>
-                  <li>30 Mbps - 399</li>
-                  <li>60 Mbps - 549 </li>
-                  <li>100 Mbps - 699 </li>
-                  <li>200 Mbps - 999 </li>
-                  <li>300 Mbps - 1499 </li>
-
-                </ul>
-                <div class="clearfix"></div>
-                <br />
-                <br />
-                <a class="btn btn-light orderbtn" href="#">Order Now </a>
-              </div>
-            </div>
-
-
-            <!--end item-->
-
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="pricetable-holder-6   bottom-margin plan">
-                <h3 class="title font-weight-5 card_head" style="color: whitesmoke;">Standard</h3>
-                <div class="price-circle">
-                  <div class="price"> <b style="color:black ;">6</b><br />
-                    <i style="color:black ;">Months</i>
-                  </div>
-                </div>
-                <br />
-                <ul class="features-list">
-                  <li>15 Mbps - 1194</li>
-                  <li>30 Mbps - 2394</li>
-                  <li>60 Mbps - 3294 </li>
-                  <li>100 Mbps - 4194 </li>
-                  <li>200 Mbps - 5994 </li>
-                  <li>300 Mbps - 8994 </li>
-
-                </ul>
-                <div class="clearfix"></div>
-                <br />
-                <br />
-                <a class="btn btn-light orderbtn" href="#">Order Now </a>
-              </div>
-            </div>
-            <!--end item-->
-
-            <div class="col-md-4 col-sm-6 col-xs-12 ">
-              <div class="pricetable-holder-6  bottom-margin plan ">
-                <h3 class="title font-weight-5 card_head" style="color: whitesmoke;">Premium</h3>
-                <div class="price-circle">
-                  <div class="price"> <b style="color:black ;">12</b><br />
-                    <i style="color:black ;">Months</i>
-                  </div>
-                </div>
-                <br />
-                <ul class="features-list">
-                  <li>15 Mbps - 2388</li>
-                  <li>30 Mbps - 4788</li>
-                  <li>60 Mbps - 6588 </li>
-                  <li>100 Mbps - 8388 </li>
-                  <li>200 Mbps - 11988 </li>
-                  <li>300 Mbps - 17988 </li>
-
-
-                </ul>
-                <div class="clearfix"></div>
-                <br />
-                <br />
-                <!-- <a class="btn btn-green-4 btn-round" href="#">Order Now !</a> -->
-                <a class="btn btn-light orderbtn" href="#">Order Now </a>
-
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-      <div class="clearfix"></div>
-      <!-- end section -->
-
-      <!-- <div class="container" style="padding-top: 30px;">
-        <div class="row">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Port Speed</th>
-                <th>1 Month</th>
-                <th>6 Month</th>
-                <th>12 Month</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td data-label="Column 1">15 Mbps</td>
-                <td data-label="Column 2">199</td>
-                <td data-label="Column 3">1194</td>
-                <td data-label="Column 4">2388</td>
-              </tr>
-              <tr>
-                <td data-label="Column 1">30 Mbps</td>
-                <td data-label="Column 2">399</td>
-                <td data-label="Column 3">2394</td>
-                <td data-label="Column 4">4788</td>
-              </tr>
-              <tr>
-                <td data-label="Column 1">60 Mbps</td>
-                <td data-label="Column 2">549</td>
-                <td data-label="Column 3">3294</td>
-                <td data-label="Column 4">6588</td>
-              </tr>
-              <tr>
-                <td data-label="Column 1">100 Mbps</td>
-                <td data-label="Column 2">699</td>
-                <td data-label="Column 3">4194</td>
-                <td data-label="Column 4">8388</td>
-              </tr>
-              <tr>
-                <td data-label="Column 1">200 Mbps</td>
-                <td data-label="Column 2">999</td>
-                <td data-label="Column 3">5994</td>
-                <td data-label="Column 4">11988</td>
-              </tr>
-              <tr>
-                <td data-label="Column 1">300 Mbps</td>
-                <td data-label="Column 2">1499</td>
-                <td data-label="Column 3">8994</td>
-                <td data-label="Column 4">17988</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div> -->
-
-
-      <section class="sec-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-xs-12 text-center">
-              <h3 class="uppercase font-weight-5 less-mar-1">Reach Us</h3>
-              <div class="clearfix"></div>
-              <div class="title-line align-center"></div>
-              <!-- <p class="sub-title">Lorem ipsum dolor sit amet consectetuer adipiscing elit. Suspendisse et justo.
-                Praesent mattis commodo augue Aliquam justo sit amet ipsum dolor.</p> -->
-            </div>
-            <div class="clearfix"></div>
-            <!--end title-->
-            <br />
-
-            <div class="col-md-12 col-sm-12" style="text-align: center; justify-content: center;">
-              <div class="iconcircle-medium white">
-                <!-- <span class="material-symbols-outlined">
-                </span> --><img src="{{ url_for('static', filename='images/support_agent.svg') }}" alt="contact"
-                  height="60" width="60">
-
-              </div>
-              <div class="feature-box-21 text-center bottom-margin">
-                <div></div>
-                <br />
-                <h1>Jaytel Solutions (OPC) Pvt,Ltd. Chittoor</h1>
-                <h3 class="title">Mobile : 6305256722</h3>
-                <p>Web Page :<a href=""></a> Jaytel.in</p>
-              </div>
-            </div>
-            <!--end item-->
-
-
-
-          </div>
-        </div>
-      </section>
-      <div class=" clearfix"></div>
-      <!--end section-->
-
-
     </div>
+  </section>
+  <div class=" clearfix"></div>
+  <!--end section-->
+
+
+  </div>
   </div>
   </section>
   <div class="clearfix"></div>
@@ -659,7 +699,7 @@
   <section class="sec-xxless-padding">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 text-left"> <span>Copyright © 2024 <a href="#">Hosting</a> By <a href="#">Techzoos</a> |
+        <div class="col-md-6 text-left"> <span>Copyright 2024 © <a href="#"></a> <a href="#">Jaytel Fibernet</a> |
             All rights reserved.</span></div>
         <div class="col-md-6">
           <ul class="footer-social-icons pull-right">
@@ -767,6 +807,77 @@
   <!-- <script src="js/functions/functions.js"></script> -->
   <script src="{{ url_for('static', filename='js/functions/functions.js') }}"></script>
 
+  <script>
+    document.getElementById('toggleTerms').addEventListener('click', function () {
+      var termsContainer = document.getElementById('termsContainer');
+      if (termsContainer.style.display === 'none') {
+        termsContainer.style.display = 'block';
+        this.innerText = 'Hide Terms and Conditions';
+      } else {
+        termsContainer.style.display = 'none';
+        this.innerText = 'Show Terms and Conditions';
+      }
+    });
+  </script>
+
+  <!-- <script>
+   
+    var modal = document.getElementById("myModal");
+
+   
+    var btn = document.getElementById("myBtn");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script> -->
+  <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Get the OK button that also closes the modal
+    var okBtn = document.getElementById("okBtn");
+
+    // When the user clicks the button, open the modal 
+    btn.onclick = function () {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks on the OK button, close the modal
+    okBtn.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
 

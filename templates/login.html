@@ -5,9 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Login</title>
-  <meta name="keywords" content="hostlinea, themeforest, envatoelements, codelayers, website templates " />
-  <meta name="description" content="Hostlinea hosting HTML5 Template">
-  <meta name="author" content="codelayers">
+  <meta name="keywords" content="Take your Internet" />
+  <meta name="description" content="Internet service provider">
+  <meta name="author" content="ISP Provider , Internet">
+  <meta name="description"
+    content="Jaytel Fibernet provides high-speed internet services to residential and business customers Chittoor.">
+  <meta name="keywords"
+    content="Jaytel Fibernet, Internet Service Provider, High-Speed Internet, Broadband, Fibernet Chittoor">
 
   <!-- Mobile view -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -141,13 +145,13 @@
 
   <!-- Preloader icon -->
 
-  <div class="wrapper-boxed">
+  <!-- <div class="wrapper-boxed">
     <div class="site-wrapper" style="position: relative;">
       <div class="topbar light topbar-padding">
         <div class="container">
           <ul class="toplist toppadding">
             <li class="lineright"><a href="{{ url_for('login') }}">Admin Login</a></li>
-            <li class="lineright"><a href="#">Register</a></li>
+            <li class="lineright"><a href="{{ url_for('contact') }}">Register</a></li>
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -155,151 +159,145 @@
           </ul>
         </div>
       </div>
-      <div class="clearfix"></div>
+      <div class="clearfix"></div> -->
 
-      <!--end topbar-->
+  <!--end topbar-->
 
-      <div class="col-md-12 nopadding">
-        <div id="header">
-          <div class="container">
-            <div class="navbar navbar-default yamm">
-              <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid"
-                  class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span
-                    class="icon-bar"></span></button>
-                <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.svg') }}"
-                    alt="logo" style="width:100px; padding-bottom: 10px;"></a>
-              </div>
-              <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
-                <ul class="nav navbar-nav" style="font-size: large; padding-top: 20px; color: #555555;">
-                  <li class="dropdown"> <a href="{{ url_for('index') }}" class="dropdown-toggle">Home</a>
+  <!-- <div class="col-md-12 nopadding">
+    <div id="header">
+      <div class="container">
+        <div class="navbar navbar-default yamm">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid"
+              class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span
+                class="icon-bar"></span></button>
+            <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.svg') }}"
+                alt="logo" style="width:100px; padding-bottom: 10px;"></a>
+          </div>
+          <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
+            <ul class="nav navbar-nav" style="font-size: large; padding-top: 20px; color: #555555;">
+              <li class="dropdown"> <a href="{{ url_for('index') }}" class="dropdown-toggle">Home</a>
 
-                  </li>
+              </li>
 
-                  <li> <a href="{{ url_for('contact') }}" class="dropdown-toggle">Register</a></li>
+              <li> <a href="{{ url_for('contact') }}" class="dropdown-toggle">Register</a></li>
 
-                  <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">About Us</a></li>
-                  <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">Speed Test</a></li>
+              <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">About Us</a></li>
+              <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">Speed Test</a></li>
 
-                </ul>
-              </div>
-            </div>
+            </ul>
           </div>
         </div>
       </div>
-      <!--end menu-->
+    </div>
+  </div> -->
+  <!--end menu-->
 
-      <div class="clearfix"></div>
-      <section class="sec-padding section-dark text-center">
-        <img src="{{ url_for('static', filename='images/Jaytel-Banner.svg') }}" alt="logo">
+  <!-- <div class="clearfix"></div>
+  <section class="sec-padding section-dark text-center">
+    <img src="{{ url_for('static', filename='images/Jaytel-Banner.svg') }}" alt="logo">
 
-      </section>
-      <div class="clearfix"></div>
-      <!-- end section -->
+  </section> -->
+  <div class="clearfix"></div>
+  <!-- end section -->
 
-      <section>
-        <div class="pagenation-holder" style="padding-top: 30px;">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-6">
-
-              </div>
-              <div class="col-md-6 text-right">
-                <div class="pagenation_links"><a href="#">Home</a><i> / </i> <a href="#">Pages</a> <i>
-                    <!-- / </i> Login Form</div> -->
-                </div>
-              </div>
-            </div>
-          </div>
-      </section>
-      <div class="clearfix"></div>
-      <!--end section-->
-
-
-      <section class="sec-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-7 col-centered">
-              <div class="text-box padding-4 border">
-                <div class="smart-forms smart-container wrap-3" style="background-color: cadetblue;">
-                  <h4 class="uppercase" style="text-align: center;padding: 10px;">Login Form</h4>
-                  <form method="post" action="{{ url_for('login') }}" id="contact">
-                    <div>
-                      <!-- <div class="spacer-b30">
-                      </div> -->
-
-
-
-                      <div class="spacer-t30 spacer-b30">
-                        <div class="tagline"><span> Login </span></div><!-- .tagline -->
-                      </div>
-                      <br />
-                      <div class="section" style="padding: 15px;">
-                        <label class="field prepend-icon">
-                          <input type="text" name="username" id="username" class="gui-input"
-                            placeholder="Enter username">
-                          <span class="field-icon"><i class="fa fa-user"></i></span>
-                        </label>
-                      </div><!-- end section -->
-
-                      <div class="section" style="padding: 15px;">
-                        <label class="field prepend-icon">
-                          <input type="password" name="password" id="password" class="gui-input"
-                            placeholder="Enter password">
-                          <span class="field-icon"><i class="fa fa-lock"></i></span>
-                        </label>
-                      </div><!-- end section -->
-
-
-
-                    </div><!-- end .form-body section -->
-                    <div class="sbutton" style="padding: 20px;">
-                      <button type="submit" class="btn btn-warning">Sign in</button>
-                    </div><!-- end .form-footer section -->
-                  </form>
-
-                </div>
-              </div>
-            </div>
+  <section>
+    <div class="pagenation-holder" style="padding-top: 30px;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
 
           </div>
-          <!--end item-->
-
+          <div class="col-md-6 text-right">
+            <!-- <div class="pagenation_links"><a href="#">Home</a><i> / </i> <a href="#">Pages</a> <i> -->
+            <!-- / </i> Login Form</div> -->
+          </div>
         </div>
-      </section>
-      <!--end item -->
-      <div class="clearfix"></div>
+      </div>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+  <!--end section-->
+
+
+  <section class="sec-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-centered">
+          <div class="text-box padding-4 border">
+            <div class="smart-forms smart-container wrap-3" style="background-color: grey;">
+              <h4 class="uppercase" style="text-align: center;padding: 10px;">Login Form</h4>
+              <form method="post" action="{{ url_for('login') }}" id="contact">
+                <div>
+
+                  <div class="spacer-t30 spacer-b30">
+                    <!-- <div class="tagline"><span> Login </span></div>      -->
+                  </div>
+                  <br />
+                  <div class="section" style="padding: 15px;">
+                    <label class="field prepend-icon">
+                      <input type="text" name="username" id="username" class="gui-input" placeholder="Enter username">
+                      <span class="field-icon"><i class="fa fa-user"></i></span>
+                    </label>
+                  </div><!-- end section -->
+
+                  <div class="section" style="padding: 15px;">
+                    <label class="field prepend-icon">
+                      <input type="password" name="password" id="password" class="gui-input"
+                        placeholder="Enter password">
+                      <span class="field-icon"><i class="fa fa-lock"></i></span>
+                    </label>
+                  </div><!-- end section -->
 
 
 
+                </div><!-- end .form-body section -->
+                <div class="sbutton" style="padding: 20px;">
+                  <button type="submit" class="btn btn-primary">Sign in</button>
+                </div><!-- end .form-footer section -->
+              </form>
 
-      <div class="divider-line-dobble"></div>
-      <div class="clearfix"></div>
-      <section class="sec-xxless-padding">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-left"> <span>Copyright © 2024 <a
-                  href="https://1.envato.market/hostlinea-html-by-codelayers">Techzoos</a> By <a
-                  href="https://1.envato.market/codelayers"></a> | All rights reserved.</span></div>
-            <div class="col-md-6">
-              <ul class="footer-social-icons pull-right">
-                <li><a class="twitter" href="https://twitter.com/codelayers"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-              </ul>
             </div>
           </div>
         </div>
-      </section>
-      <div class="clearfix"></div>
-      <!--end section-->
 
-      <a href="#" class="scrollup"></a><!-- end scroll to top of the page-->
+      </div>
+      <!--end item-->
 
     </div>
-    <!--end site wrapper-->
+  </section>
+  <!--end item -->
+  <div class="clearfix"></div>
+
+
+
+
+  <div class="divider-line-dobble"></div>
+  <div class="clearfix"></div>
+  <section class="sec-xxless-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-left"> <span>Copyright 2024 © <a href="">Jaytel Fibernet</a> <a href=""></a> | All
+            rights reserved.</span></div>
+        <div class="col-md-6">
+          <ul class="footer-social-icons pull-right">
+            <li><a class="twitter" href="https://twitter.com/codelayers"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.facebook.com/codelayers"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+  <!--end section-->
+
+  <a href="#" class="scrollup"></a><!-- end scroll to top of the page-->
+
+  </div>
+  <!--end site wrapper-->
   </div>
   <!--end wrapper boxed-->
 

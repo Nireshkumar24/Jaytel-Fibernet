@@ -5,9 +5,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>About</title>
-  <meta name="keywords" content="hostlinea, themeforest, envatoelements, codelayers, website templates " />
-  <meta name="description" content="Hostlinea hosting HTML5 Template">
-  <meta name="author" content="codelayers">
+  <meta name="keywords" content="Take your Internet" />
+  <meta name="description" content="Internet service provider">
+  <meta name="author" content="ISP Provider , Internet">
+  <meta name="description"
+    content="Jaytel Fibernet provides high-speed internet services to residential and business customers Chittoor.">
+  <meta name="keywords"
+    content="Jaytel Fibernet, Internet Service Provider, High-Speed Internet, Broadband, Fibernet Chittoor">
 
   <!-- Mobile view -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,26 +107,20 @@
 
   <!-- Skin stylesheet -->
   <style>
-    /* Targeting the links directly for hover effect */
     .navbar-default .navbar-nav>li>a {
       transition: all 0.3s ease;
-      /* Smooth transition for background and border changes */
+
       padding: 10px 15px;
-      /* Adjust padding as needed */
+
       margin: 5px 0;
-      /* Margin for spacing between menu items */
+
       border: 3px solid transparent;
-      /* Initial border setting */
     }
 
-    /* Adding the hover effect */
     .navbar-default .navbar-nav>li>a:hover {
       background-color: blue;
-      /* Background color change on hover */
       color: white;
-      /* Text color change on hover, if needed */
       border-color: blue;
-      /* Border color change on hover */
     }
 
 
@@ -164,13 +162,12 @@
 
   <!-- Preloader icon -->
 
-  <div class="wrapper-boxed">
+  <!-- <div class="wrapper-boxed">
     <div class="site-wrapper" style="position: relative;">
       <div class="topbar light topbar-padding">
         <div class="container">
           <ul class="toplist toppadding">
-            <li class="lineright"><a href="#">Login</a></li>
-            <li class="lineright"><a href="#">Register</a></li>
+            <li class="lineright"><a href="{{ url_for('contact') }}">Register</a></li>
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
@@ -178,122 +175,124 @@
           </ul>
         </div>
       </div>
-      <div class="clearfix"></div>
+      <div class="clearfix"></div> -->
 
-      <!--end topbar-->
+  <!--end topbar-->
 
-      <div class="col-md-12 nopadding">
-        <div id="header">
-          <div class="container">
-            <div class="navbar navbar-default yamm">
-              <div class="navbar-header">
-                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid"
-                  class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span
-                    class="icon-bar"></span></button>
-                <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.svg') }}"
-                    alt="logo" style="width:100px; padding-bottom:10px ;"></a>
-              </div>
-              <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
-                <ul class="nav navbar-nav" style="font-size: large; padding-top: 20px; color: #555555;">
-                  <li class="dropdown"> <a href="{{ url_for('index') }}" class="dropdown-toggle">Home</a>
+  <div class="col-md-12 nopadding">
+    <div id="header">
+      <div class="container">
+        <div class="navbar navbar-default yamm">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#navbar-collapse-grid"
+              class="navbar-toggle two three"><span class="icon-bar"></span><span class="icon-bar"></span><span
+                class="icon-bar"></span></button>
+            <a href="index.html" class="navbar-brand"><img src="{{ url_for('static', filename='images/logo.svg') }}"
+                alt="logo" style="width:100px; padding-bottom:10px ;"></a>
+          </div>
+          <div id="navbar-collapse-grid" class="navbar-collapse collapse pull-right">
+            <ul class="nav navbar-nav" style="font-size: large; padding-top: 20px; color: #555555;">
+              <li class="dropdown"> <a href="{{ url_for('index') }}" class="dropdown-toggle">Home</a>
 
-                  </li>
+              </li>
 
-                  <li> <a href="{{ url_for('contact') }}" class="dropdown-toggle">Register</a></li>
+              <li> <a href="{{ url_for('contact') }}" class="dropdown-toggle">Register</a></li>
 
-                  <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">About Us</a></li>
-                  <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">Speed Test</a></li>
-
-
+              <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">About Us</a></li>
+              <li> <a href="{{ url_for('about') }}" class="dropdown-toggle">Speed Test</a></li>
 
 
-                </ul>
-              </div>
-            </div>
+
+
+            </ul>
           </div>
         </div>
       </div>
-      <!--end menu-->
+    </div>
+  </div>
+  <!--end menu-->
 
-      <div class="clearfix"></div>
-      <section class="sec-padding  text-center" style="background-color: #fff;">
-        <div class="container">
-          <div class="row">
-            <h1 class="text-black uppercase font-weight-7">About Us</h1>
-            <h4 class="text-normal" style="line-height: 1cm; letter-spacing: 1px;">Welcome to <b>Jaytel </b>Fibernet
-              Services, your trusted
-              partner in connecting you
-              to the
-              world for the past 15 years. Since our inception in 2009, we have been committed to delivering
-              high-quality internet services to the residents and businesses of Chittor and its surrounding areas.
+  <div class="clearfix"></div>
+  <section class="sec-padding  text-center" style="background-color: #fff;">
+    <div class="container">
+      <div class="row">
+        <h1 class="text-black uppercase font-weight-7">About Us</h1>
+        <h4 class="font-size-medium" style="line-height: 1cm; letter-spacing: 1px;font-size: medium;">Welcome to
+          <b>Jaytel
+          </b>Fibernet
+          Services, your trusted
+          partner in connecting you
+          to the
+          world for the past 15 years. Since our inception in 2009, we have been committed to delivering
+          high-quality internet services to the residents and businesses of Chittor and its surrounding areas.
 
-            </h4>
-            <br />
-            <!-- <a href="#" class="btn btn-bgprimary">Get Started</a> -->
-          </div>
-        </div>
-      </section>
-      <div class="clearfix"></div>
-      <!-- end section -->
+        </h4>
+        <br />
+        <!-- <a href="#" class="btn btn-bgprimary">Get Started</a> -->
+      </div>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+  <!-- end section -->
 
-      <section class="about" style="background-color: #fff;">
-        <div class="container">
-          <h4 class="header">Our Mission:
-          </h4>
-          <p class="content">At Jaytel Fibernet , our mission is to provide reliable, fast, and affordable
-            internet
-            connectivity to empower individuals and businesses to thrive in the digital age. We understand the
-            importance of staying connected in today's world, and we strive to bridge the digital divide by making
-            internet access accessible to all.
-          </p>
+  <section class="about" style="background-color: #fff; line-height: 0.8cm; letter-spacing: 1px;">
+    <div class="container">
+      <h4 class="header">Our Mission:
+      </h4>
+      <p class="content">At Jaytel Fibernet , our mission is to provide reliable, fast, and affordable
+        internet
+        connectivity to empower individuals and businesses to thrive in the digital age. We understand the
+        importance of staying connected in today's world, and we strive to bridge the digital divide by making
+        internet access accessible to all.
+      </p>
 
-          <h4 class="header">Our Commitment to Quality:
-          </h4>
-          <p class="content">We take pride in our unwavering commitment to delivering exceptional service to our
-            customers. Our team of experienced professionals works tirelessly to ensure that our network infrastructure
-            is robust and reliable, guaranteeing seamless connectivity for our users. We invest in the latest technology
-            and infrastructure upgrades to stay ahead of the curve and meet the evolving needs of our customers.
+      <h4 class="header">Our Commitment to Quality:
+      </h4>
+      <p class="content">We take pride in our unwavering commitment to delivering exceptional service to our
+        customers. Our team of experienced professionals works tirelessly to ensure that our network infrastructure
+        is robust and reliable, guaranteeing seamless connectivity for our users. We invest in the latest technology
+        and infrastructure upgrades to stay ahead of the curve and meet the evolving needs of our customers.
 
-          </p>
+      </p>
 
-          <h4 class="header">Services We Offer:
-          </h4>
-          <p class="content">At Chittor Internet Services, we offer a comprehensive range of internet solutions tailored
-            to suit the unique requirements of our diverse clientele. Whether you're a residential user looking for
-            high-speed internet for streaming and gaming or a business in need of dedicated bandwidth for
-            mission-critical applications, we have the perfect solution for you.
-          </p>
-          <ol type="disc" style="font-size: 20px; line-height: 0.8cm;"> Our services include:
-            <li> High-speed broadband internet</li>
-            <li> Dedicated leased lines for businesses</li>
-            <li> Wi-Fi hotspot solutions</li>
-            <li> Customized internet packages for residential and commercial customers</li>
-            <li> 24/7 customer support and technical assistance</li>
-          </ol>
-          <h4 class="header">Our Community Involvement:
-          </h4>
-          <p class="content">As a locally owned and operated internet service provider, we are deeply invested in the
-            communities we serve. We actively participate in community events, sponsor local initiatives, and support
-            educational programs to promote digital literacy and empower the next generation of internet users.
-          </p>
-          <h4 class="header">Our Community Involvement:</h4>
-          <ol style="font-size: 20px; line-height: 0.8cm;">
-            <li> Reliable and fast internet connectivity.</li>
-            <li> Competitive pricing with no hidden fees.</li>
-            <li> Friendly and responsive customer support.</li>
-            <li> Proven track record of 15 years of service excellence.</li>
-            <li> Commitment to community engagement and social responsibility.</li>
-            <p class="content">
-              At Chittor Internet Services, we believe that everyone deserves access to high-quality internet services.
-              Join us in our mission to connect Chittor to the world and unlock the limitless possibilities of the
-              digital future. Contact us today to experience the difference of Chittor Internet Services.
-            </p>
-          </ol>
-        </div>
-      </section>
+      <h4 class="header">Services We Offer:
+      </h4>
+      <p class="content">At Jaytel Fibernet, we offer a comprehensive range of internet solutions tailored
+        to suit the unique requirements of our diverse clientele. Whether you're a residential user looking for
+        high-speed internet for streaming and gaming or a business in need of dedicated bandwidth for
+        mission-critical applications, we have the perfect solution for you.
+      </p>
+      <ol type="disc"> Our services include:
+        <li> High-speed broadband internet</li>
+        <li> Dedicated leased lines for businesses</li>
+        <li> Wi-Fi hotspot solutions</li>
+        <li> Customized internet packages for residential and commercial customers</li>
+        <li> 24/7 customer support and technical assistance</li>
+      </ol>
+      <h4 class="header">Our Community Involvement:
+      </h4>
+      <p class="content">As a locally owned and operated internet service provider, we are deeply invested in the
+        communities we serve. We actively participate in community events, sponsor local initiatives, and support
+        educational programs to promote digital literacy and empower the next generation of internet users.
+      </p>
+      <h4 class="header">Our Community Involvement:</h4>
+      <ol>
+        <li> Reliable and fast internet connectivity.</li>
+        <li> Competitive pricing with no hidden fees.</li>
+        <li> Friendly and responsive customer support.</li>
+        <li> Proven track record of 15 years of service excellence.</li>
+        <li> Commitment to community engagement and social responsibility.</li>
+        <p class="content">
+          At Jaytel Fibernet, we believe that everyone deserves access to high-quality internet services.
+          Join us in our mission to connect Chittor to the world and unlock the limitless possibilities of the
+          digital future. Contact us today to experience the difference of Chittor Internet Services.
+        </p>
+      </ol>
+    </div>
+  </section>
 
 
-      <!-- <section class="sec-padding">
+  <!-- <section class="sec-padding">
         <div class="container">
          
           
@@ -327,76 +326,76 @@
       <div class="clearfix"></div> -->
 
 
-      <section class="sec-padding section-dark">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-3 text-center bottom-margin">
-              <div class="icon-plain-medium gray center"><span class="icon-globe"></span></div>
-              <br />
-              <h4 class="text-white"> ISP Provider</h4>
-              <p>The Largest Internet Service Providers (ISPs)</p>
-            </div>
-            <!--end item-->
-
-            <div class="col-md-3 text-center bottom-margin">
-              <div class="icon-plain-medium gray center"><span class="icon-layers"></span></div>
-              <br />
-              <h4 class="text-white">Internet</h4>
-              <p>High-speed broadband internet .</p>
-            </div>
-            <!--end item-->
-
-            <div class="col-md-3 text-center bottom-margin">
-              <div class="icon-plain-medium gray center"><span class="icon-profile-male"></span></div>
-              <br />
-              <h4 class="text-white"> Customers</h4>
-              <p>Friendly and responsive customer support. </p>
-            </div>
-            <!--end item-->
-
-            <div class="col-md-3 text-center bottom-margin">
-              <div class="icon-plain-medium gray center"><span class="icon-chat"></span></div>
-              <br />
-              <h4 class="text-white">24/7 Support</h4>
-              <p>24/7 customer support and technical assistance .</p>
-            </div>
-            <!--end item-->
-
-          </div>
+  <section class="sec-padding section-dark">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 text-center bottom-margin">
+          <div class="icon-plain-medium gray center"><span class="icon-globe"></span></div>
+          <br />
+          <h4 class="text-white"> ISP Provider</h4>
+          <p>The Largest Internet Service Providers (ISPs)</p>
         </div>
-      </section>
-      <div class="clearfix"></div>
-      <!-- end section -->
+        <!--end item-->
 
-
-      <!-- end section -->
-
-      <div class="divider-line-dobble"></div>
-      <div class="clearfix"></div>
-      <section class="sec-xxless-padding" style="background-color: #fff;">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-left"> <span>Copyright © 2024 <a href="#">Techzoos</a> <a href="#"></a> | All
-                rights reserved.</span></div>
-            <div class="col-md-6">
-              <ul class="footer-social-icons pull-right">
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-              </ul>
-            </div>
-          </div>
+        <div class="col-md-3 text-center bottom-margin">
+          <div class="icon-plain-medium gray center"><span class="icon-layers"></span></div>
+          <br />
+          <h4 class="text-white">Internet</h4>
+          <p>High-speed broadband internet .</p>
         </div>
-      </section>
-      <div class="clearfix"></div>
-      <!--end section-->
+        <!--end item-->
 
-      <a href="#" class="scrollup"></a><!-- end scroll to top of the page-->
+        <div class="col-md-3 text-center bottom-margin">
+          <div class="icon-plain-medium gray center"><span class="icon-profile-male"></span></div>
+          <br />
+          <h4 class="text-white"> Customers</h4>
+          <p>Friendly and responsive customer support. </p>
+        </div>
+        <!--end item-->
 
+        <div class="col-md-3 text-center bottom-margin">
+          <div class="icon-plain-medium gray center"><span class="icon-chat"></span></div>
+          <br />
+          <h4 class="text-white">24/7 Support</h4>
+          <p>24/7 customer support and technical assistance .</p>
+        </div>
+        <!--end item-->
+
+      </div>
     </div>
-    <!--end site wrapper-->
+  </section>
+  <div class="clearfix"></div>
+  <!-- end section -->
+
+
+  <!-- end section -->
+
+  <div class="divider-line-dobble"></div>
+  <div class="clearfix"></div>
+  <section class="sec-xxless-padding" style="background-color: #fff;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-left"> <span>Copyright 2024 © <a href="#">Jaytel Fibernet</a> <a href="#"></a> | All
+            rights reserved.</span></div>
+        <div class="col-md-6">
+          <ul class="footer-social-icons pull-right">
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="clearfix"></div>
+  <!--end section-->
+
+  <a href="#" class="scrollup"></a><!-- end scroll to top of the page-->
+
+  </div>
+  <!--end site wrapper-->
   </div>
   <!--end wrapper boxed-->
 
