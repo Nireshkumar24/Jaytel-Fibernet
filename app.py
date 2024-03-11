@@ -39,7 +39,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         # Implement your authentication logic here
-        if username == 'niresh' and password == 'password':  # Placeholder, use real validation
+        if username == 'Jaytel_Fibernet' and password == 'Jaytel@2024':  # Placeholder, use real validation
             return redirect(url_for('dashboard'))
         else:
             return render_template('login.html')
@@ -48,7 +48,6 @@ def login():
 @app.route('/logout')
 def logout():
     return render_template('index.html')
- 
  
 @app.route('/contact',methods=['GET','POST'])
 def contact():
