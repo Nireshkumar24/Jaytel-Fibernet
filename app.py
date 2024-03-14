@@ -97,5 +97,31 @@ def export_data():
     
     return send_file(output, as_attachment=True, attachment_filename='export.xlsx', mimetype='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
 
+@app.route('/delete_all_data')
+def delete_all_data():
+    try:
+        for table in reversed(db.metadata.sorted_tables):
+            db.session.execute(table.delete())
+        db.session.commit()
+        return "All data deleted successfully!"
+    except Exception as e:
+        db.session.rollback()
+        return "Error occurred while deleting data: " + str(e)
+
+@app.route('/delete/<int:record_id>')
+def delete_record(record_id):
+    try:
+        record = Register.query.get(record_id)
+        if record:
+            db.session.delete(record)
+            db.session.commit()
+            return f"Record with ID {record_id} deleted successfully."
+        else:
+            return f"No record found with ID {record_id}."
+    except Exception as e:
+        db.session.rollback()
+        return f"Error occurred while deleting record with ID {record_id}: {str(e)}"
+
+
 if __name__ == '__main__':
      app.run(port=5001,debug=True)
