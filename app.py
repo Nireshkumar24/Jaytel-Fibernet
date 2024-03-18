@@ -9,10 +9,10 @@ from sqlalchemy import or_
 from flask import send_file
 import pandas as pd
 from io import BytesIO
-
+from flask import abort
 
 app = Flask(__name__,template_folder='templates',static_folder='static')
-
+app.config['SECRET_KEY'] = 'Jaytel@2024'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///Jaytel.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
@@ -33,21 +33,38 @@ def create_tables():
 def index():
     return render_template('index.html')
 
-@app.route('/login',methods=['GET','POST'])
+# @app.route('/login',methods=['GET','POST'])
+# def login():
+#     if request.method == 'POST':
+#         username = request.form['username']
+#         password = request.form['password']
+#         # Implement your authentication logic here
+#         if username == 'Jaytel_Fibernet' and password == 'Jaytel@2024':  # Placeholder, use real validation
+#             return redirect(url_for('dashboard'))
+#         else:
+#             return render_template('login.html')
+#     return render_template('login.html')
+
+@app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
-        # Implement your authentication logic here
-        if username == 'Jaytel_Fibernet' and password == 'Jaytel@2024':  # Placeholder, use real validation
+        # Placeholder for real validation
+        if username == 'Jaytel_Fibernet' and password == 'Jaytel@2024':
+            session['logged_in'] = True
+            flash('You were successfully logged in', 'success')
             return redirect(url_for('dashboard'))
         else:
-            return render_template('login.html')
+            flash('Login Unsuccessful. Please check username and password', 'danger')
     return render_template('login.html')
+
  
 @app.route('/logout')
 def logout():
-    return render_template('index.html')
+    session.pop('logged_in', None)
+    flash('You have been logged out.', 'info')
+    return redirect(url_for('index'))
  
 @app.route('/contact',methods=['GET','POST'])
 def contact():
@@ -57,9 +74,10 @@ def contact():
            Contact=request.form.get('contact', type=int),
            Address=request.form.get('sendermessage'))
       db.session.add(Register1)
-      db.session.commit()
-      
+      db.session.commit()        
+      return redirect(url_for('contact'))
     return render_template('contact.html')
+    
  
 
 @app.route('/about')
@@ -69,8 +87,13 @@ def about():
 
 @app.route('/dashboard', methods=['GET', 'POST'])
 def dashboard():
-    search_query = request.args.get('search', '')  # Get the search term from the query string
-    if search_query:
+    #  search_query = request.args.get('search', '') 
+     if not session.get('logged_in'):
+        flash('Please login to access this page.', 'danger')
+        return redirect(url_for('login'))
+    
+     search_query = request.args.get('search', '')  
+     if search_query:
         # Filter entries where any field matches the search query
         entries = Register.query.filter(
             or_(
@@ -79,10 +102,10 @@ def dashboard():
                 Register.Address.like(f'%{search_query}%')
             )
         ).all()
-    else:
+     else:
         # If no search query, display all entries
         entries = Register.query.all()
-    return render_template('Dashboard.html', entries=entries)
+     return render_template('Dashboard.html', entries=entries)
 
 
 @app.route('/export_data')
